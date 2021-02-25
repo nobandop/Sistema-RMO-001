@@ -1,6 +1,8 @@
 #ifndef PRODUCTO_H
 #define PRODUCTO_H
 
+#include <iostream>
+#include <string.h>
 #include "Proveedor.h"
 using namespace std;
 

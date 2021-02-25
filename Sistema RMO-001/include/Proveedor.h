@@ -1,7 +1,8 @@
 #ifndef PROVEEDOR_H
 #define PROVEEDOR_H
 
-#include "Controlador.h"
+#include <iostream>
+#include <string.h>
 using namespace std;
 
 class Proveedor

@@ -1,6 +1,8 @@
 #ifndef CONTROLADOR_H
 #define CONTROLADOR_H
 
+#include <iostream>
+#include <string.h>
 #include "Producto.h"
 #include "Proveedor.h"
 #include "Cliente.h"
