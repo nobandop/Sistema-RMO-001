@@ -1,15 +1,24 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
 
+#include <Controlador.h>
 
 class Cliente
 {
+    private:
+        char codigoCliente[10];
+        char nombrecompletoCliente[30];
+        char dniCliente[10];
+        char rucCliente[10];
+        char telefonoCliente[10];
+        Factura facturas[100];
+        int nFacturas;
     public:
         Cliente();
-
-    protected:
-
-    private:
+        void leerCliente();
+        void modificarCliente();
+        void mostrarCliente();
+        void verFacturas();
 };
 
 #endif // CLIENTE_H
