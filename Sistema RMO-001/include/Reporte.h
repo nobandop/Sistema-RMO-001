@@ -1,7 +1,11 @@
 #ifndef REPORTE_H
 #define REPORTE_H
 
-#include <Controlador.h>
+#include <iostream>
+#include "Factura.h"
+using namespace std;
+
+class Factura;
 
 class Reporte
 {

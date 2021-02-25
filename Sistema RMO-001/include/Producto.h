@@ -1,7 +1,10 @@
 #ifndef PRODUCTO_H
 #define PRODUCTO_H
 
-#include<Controlador.h>
+#include "Proveedor.h"
+using namespace std;
+
+class Proveedor;
 
 class Producto
 {

@@ -1,18 +1,25 @@
 #ifndef CONTROLADOR_H
 #define CONTROLADOR_H
 
-#include <Producto.h>
-#include <Proveedor.h>
-#include <Cliente.h>
-#include <Factura.h>
-#include <Reporte.h>
+#include "Producto.h"
+#include "Proveedor.h"
+#include "Cliente.h"
+#include "Factura.h"
+#include "Reporte.h"
+using namespace std;
+
+class Producto;
+class Proveedor;
+class Cliente;
+class Factura;
+class Reporte;
 
 class Controlador
 {
     private:
         char nombre[10];
         char nomusuario[10];
-        char contraseña[10];
+        char contrasenia[10];
         Producto* productos[100];
         Proveedor* proveedores[100];
         Cliente* clientes[100];
@@ -22,7 +29,7 @@ class Controlador
         Controlador();
         void actualizarNombre();
         void actualizarNomUsuario();
-        void actualizarContraseña();
+        void actualizarContrasenia();
         void ordenar();
         void buscar();
 };

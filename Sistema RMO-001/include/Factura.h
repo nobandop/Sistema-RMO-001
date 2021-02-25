@@ -1,7 +1,14 @@
 #ifndef FACTURA_H
 #define FACTURA_H
 
-#include <Controlador.h>
+#include <iostream>
+#include <string.h>
+#include "Cliente.h"
+#include "Producto.h"
+using namespace std;
+
+class Cliente;
+class Producto;
 
 class Factura
 {
