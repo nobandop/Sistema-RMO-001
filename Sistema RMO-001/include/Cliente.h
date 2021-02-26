@@ -8,15 +8,13 @@ using namespace std;
 
 class Factura;
 
-class Cliente
-{
+class Cliente{
     private:
-        char codigoCliente[10];
-        char nombrecompletoCliente[30];
-        char dniCliente[10];
-        char rucCliente[10];
-        char telefonoCliente[10];
-        Factura* facturas[100];
+        char codigoCliente[7];
+        char nombreCliente[40];
+        char dniCliente[8];
+        char telefonoCliente[9];
+        Factura *facturas[50];
         int nFacturas;
     public:
         Cliente();
