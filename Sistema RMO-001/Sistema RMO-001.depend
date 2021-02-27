@@ -109,3 +109,57 @@
 1614282574 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\reporte.cpp
 	"Reporte.h"
 
+1614442549 source:c:\users\antony garcia\documents\github\sistema-rmo-001\sistema rmo-001\src\controlador.cpp
+	"Controlador.h"
+
+1614442549 c:\users\antony garcia\documents\github\sistema-rmo-001\sistema rmo-001\include\controlador.h
+	<iostream>
+	<string.h>
+	"Producto.h"
+	"Proveedor.h"
+	"Cliente.h"
+	"Factura.h"
+	"Reporte.h"
+
+1614442549 c:\users\antony garcia\documents\github\sistema-rmo-001\sistema rmo-001\include\producto.h
+	<iostream>
+	<string.h>
+	"Proveedor.h"
+
+1614442549 c:\users\antony garcia\documents\github\sistema-rmo-001\sistema rmo-001\include\proveedor.h
+	<iostream>
+	<string.h>
+
+1614442549 c:\users\antony garcia\documents\github\sistema-rmo-001\sistema rmo-001\include\cliente.h
+	<iostream>
+	<string.h>
+	"Factura.h"
+
+1614442549 c:\users\antony garcia\documents\github\sistema-rmo-001\sistema rmo-001\include\factura.h
+	<iostream>
+	<string.h>
+	"Cliente.h"
+	"Producto.h"
+
+1614442549 c:\users\antony garcia\documents\github\sistema-rmo-001\sistema rmo-001\include\reporte.h
+	<iostream>
+	<string.h>
+	"Factura.h"
+
+1614442549 source:c:\users\antony garcia\documents\github\sistema-rmo-001\sistema rmo-001\src\factura.cpp
+	"Factura.h"
+
+1614442549 source:c:\users\antony garcia\documents\github\sistema-rmo-001\sistema rmo-001\src\producto.cpp
+	"Producto.h"
+
+1614442549 source:c:\users\antony garcia\documents\github\sistema-rmo-001\sistema rmo-001\src\proveedor.cpp
+	"Proveedor.h"
+
+1614442941 source:c:\users\antony garcia\documents\github\sistema-rmo-001\sistema rmo-001\src\cliente.cpp
+	"Cliente.h"
+	<iostream>
+	<string.h>
+
+1614442549 source:c:\users\antony garcia\documents\github\sistema-rmo-001\sistema rmo-001\src\reporte.cpp
+	"Reporte.h"
+
