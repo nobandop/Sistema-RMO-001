@@ -1180,7 +1180,7 @@
 											"top": 941,
 											"width": 182.45703125,
 											"height": 13,
-											"text": "-nombrecompletoCliente: char*",
+											"text": "-nombreCliente: char*",
 											"horizontalAlignment": 0
 										},
 										{
@@ -4567,7 +4567,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF32hIxtfncUkM="
 							},
-							"name": "nombrecompletoCliente",
+							"name": "nombreCliente",
 							"visibility": "private",
 							"type": "char*"
 						},
