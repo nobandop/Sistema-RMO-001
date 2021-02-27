@@ -11,9 +11,9 @@ class Proveedor;
 class Producto
 {
     private:
-        char codigoProducto[10];
-        char nombreProducto[10];
-        char categoriaProducto[10];
+        char codigoProducto[7];
+        char nombreProducto[30];
+        char categoriaProducto[20];
         int cantidadProducto;
         float precioProducto;
         Proveedor* proveedor;
@@ -21,7 +21,8 @@ class Producto
         Producto();
         void leerProducto();
         void mostrarProducto();
-        void modificarProducto();
+        void modificarProducto(int);
+        void asignarProveedor(Proveedor*);
 };
 
 #endif // PRODUCTO_H

@@ -19,9 +19,9 @@ class Reporte;
 class Controlador
 {
     private:
-        char nombre[10];
-        char nomusuario[10];
-        char contrasenia[10];
+        char nombre[30];
+        char nomusuario[20];
+        char contrasenia[15];
         Producto* productos[100];
         Proveedor* proveedores[100];
         Cliente* clientes[100];
@@ -29,6 +29,7 @@ class Controlador
         Reporte* reportes[100];
     public:
         Controlador();
+        bool verificarAcceso(char*,char*);
         void actualizarNombre();
         void actualizarNomUsuario();
         void actualizarContrasenia();
