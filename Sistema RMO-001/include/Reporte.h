@@ -6,15 +6,14 @@
 #include "Factura.h"
 using namespace std;
 
-class Factura;
-
 class Reporte
 {
     private:
-        Factura* facturas[100];
+        int nFacturas;
+        Factura* factura[100];
     public:
         Reporte();
-        void generarReporte();
+        void generarReporte(int);
         void mostrarReporte();
 };
 

@@ -6,8 +6,6 @@
 #include "Proveedor.h"
 using namespace std;
 
-class Proveedor;
-
 class Producto
 {
     private:

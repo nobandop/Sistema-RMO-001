@@ -19,7 +19,21 @@ void Producto::leerProducto(){
 	cout<<"Categoria: "; fflush(stdin); gets(categoriaProducto);
 	cout<<"Cantidad: "; cin.sync(); cin>>cantidadProducto;
 	cout<<"Precio Unitario: "; cin.sync(); cin>>precioProducto;
+}
 
+void Producto::mostrarProducto()
+{
+    cout<<"Codigo: "<<codigoProducto<<endl;
+    cout<<"Nombre: "<<nombreProducto<<endl;
+    cout<<"Categoria: "<<categoriaProducto<<endl;
+    cout<<"Cantidad: "<<cantidadProducto<<endl;
+    cout<<"Precio: "<<precioProducto<<endl;
+    cout<<"Proveedor: "<<proveedor->getNomProveedor()<<endl;
+}
+
+void Producto::modificarProducto(int n)
+{
+    cout<<"";
 }
 
 void Producto::asignarProveedor(Proveedor *p1){proveedor = p1;}

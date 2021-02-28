@@ -30,6 +30,7 @@ class Controlador
     public:
         Controlador();
         bool verificarAcceso(char*,char*);
+        void asignarDatos();
         void actualizarNombre();
         void actualizarNomUsuario();
         void actualizarContrasenia();

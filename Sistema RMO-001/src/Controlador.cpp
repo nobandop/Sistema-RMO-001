@@ -1,9 +1,10 @@
 #include "Controlador.h"
+#include <fstream>
 
 Controlador::Controlador(){
-    strcpy(nombre,"admin");
-    strcpy(nomusuario,"admin");
-    strcpy(contrasenia,"admin");
+    ifstream archivo;
+    archivo.open("usuario.txt",ios::in | ios::binary);
+
 }
 
 bool Controlador::verificarAcceso(char *nom,char *contra){
@@ -18,5 +19,15 @@ bool Controlador::verificarAcceso(char *nom,char *contra){
         return true;
     }else{
         return false;
+    }
+}
+
+void Controlador::asignarDatos(){
+    ofstream archivo;
+
+    archivo.open("usuario.txt",ios::out);
+
+    if(archivo.is_open()){
+        
     }
 }

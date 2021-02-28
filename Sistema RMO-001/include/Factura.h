@@ -7,21 +7,20 @@
 #include "Producto.h"
 using namespace std;
 
-class Cliente;
-class Producto;
-
 class Factura
 {
     private:
         char codigoFactura[10];
         char fechaFactura[10];
-        int nProductos;
         Cliente* cliente;
-        Producto* productos[100];
-        float subtotal;
+        Producto* producto[20];
+        int nProductos = 0;
+        float subtotal = 0;
     public:
         Factura();
-        void generarFactura();
+        void leerFactura();
+        void asignarCliente(Cliente*);
+        void productosComprados();
         void mostrarFactura();
 };
 

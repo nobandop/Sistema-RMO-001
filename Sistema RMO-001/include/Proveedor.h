@@ -8,11 +8,11 @@ using namespace std;
 class Proveedor
 {
     private:
-        char codigoProveedor[10];
+        char codigoProveedor[15];
         char nombreProveedor[30];
         char rucProveedor[20];
-        char telefonoProveedor[10];
-        char direccionProveedor[20];
+        char telefonoProveedor[15];
+        char direccionProveedor[40];
     public:
         Proveedor();
         void leerProveedor();

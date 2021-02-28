@@ -22,7 +22,7 @@ int main(){
 	int nProductos=0,nClientes=0,nProveedores=0,nFacturas=0,nReportes=0;
 
 	bool salida = false;
-	int equivocacion=0,opc1,opc2;
+	int equivocacion=0,opc1,opc2,resp1;
 	char nomu[20],contra[20];
 
 	do{
@@ -40,17 +40,15 @@ int main(){
                 cout<<"5. Salir"<<endl;
                 cout<<"Elija una opcion: "; cin>>opc1;
                 switch(opc1){
-                    case 1:
+                    case 1:                                     //INVENTARIO
                         system("cls");
                         cout<<"Opcion: Inventario."<<endl;
                         cout<<"----------------------------"<<endl;
                         cout<<"1. Registrar Productos"<<endl;
                         cout<<"2. Ver Lista de Productos"<<endl;
-                        cout<<"3. Modificar Productos"<<endl;
-                        cout<<"4. Registrar Proveedor"<<endl;
-                        cout<<"5. Ver Lista de Proveedores"<<endl;
-                        cout<<"6. Modificar Proveedores"<<endl;
-                        cout<<"7. Salir"<<endl;
+                        cout<<"3. Registrar Proveedor"<<endl;
+                        cout<<"4. Ver Lista de Proveedores"<<endl;
+                        cout<<"5. Salir"<<endl;
                         cout<<"Elija una opcion: "; cin>>opc2;
                         switch(opc2){
                             case 1:
@@ -58,6 +56,18 @@ int main(){
                                 cout<<"Opcion: Registrar Productos."<<endl;
                                 cout<<"-----------------------------"<<endl;
                                 listaProductos[nProductos].leerProducto();
+                                cout<<"Ahora ingrese el numero del proveedor que asignara: "<<endl;
+                                cout<<left;
+                                cout<<setw(15)<<"Codigo";
+                                cout<<setw(30)<<"Nombre";
+                                cout<<setw(20)<<"RUC";
+                                cout<<setw(15)<<"Telefono";
+                                cout<<setw(40)<<"Direccion";
+                                cout<<endl;
+                                for(int i = 0; i < nProveedores; i++){
+									listaProveedores[i].mostrarProveedor();
+								}
+                                cout<<"Respuesta: ";cin>>resp1;
                                 listaProductos[nProductos].asignarProveedor(&listaProveedores[nProveedores]);
                                 system("pause");
                             break;
@@ -67,15 +77,11 @@ int main(){
                             break;
                             case 4:
                             break;
-                            case 5:
-                            break;
-                            case 6:
-                            break;
-                            case 7: break;
+                            case 5: break;
                             default: cout<<"\nNo ingreso una opcion correcta."<<endl; system("pause"); break;
                         }
                     break;
-                    case 2:
+                    case 2:                                     //VENTAS
                         system("cls");
                         cout<<"Opcion: Ventas."<<endl;
                         cout<<"-------------------------"<<endl;
@@ -101,7 +107,7 @@ int main(){
                             default: cout<<"\nNo ingreso una opcion correcta."<<endl; system("pause"); break;
                         }
                     break;
-                    case 3:
+                    case 3:                                     //REPORTES
                         system("cls");
                         cout<<"Opcion: Reportes."<<endl;
                         cout<<"-------------------------"<<endl;
@@ -119,7 +125,7 @@ int main(){
                             default: cout<<"\nNo ingreso una opcion correcta."<<endl; system("pause"); break;
                         }
                     break;
-                    case 4:
+                    case 4:                                     //DATOS DEL USUARIO
                         system("cls");
                         cout<<"Opcion: Datos de usuario."<<endl;
                         cout<<"-------------------------"<<endl;
