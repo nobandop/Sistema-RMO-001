@@ -10,12 +10,13 @@
 	"Producto.h"
 	"Proveedor.h"
 
-1614493205 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\src\cliente.cpp
+1614495608 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\src\cliente.cpp
 	"Cliente.h"
 	<iostream>
+	<iomanip>
 	<string.h>
 
-1614492580 c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\include\cliente.h
+1614495480 c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\include\cliente.h
 	<iostream>
 	"Factura.h"
 

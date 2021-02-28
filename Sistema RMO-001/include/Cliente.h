@@ -18,9 +18,8 @@ class Cliente{
         Cliente();
         void asignarFactura(Factura*);
         void leerCliente();
-        void modificarCliente();
+        void modificarCliente(int);
         void mostrarCliente();
-        void verFacturas();
         char* getNomCliente();
 };
 
