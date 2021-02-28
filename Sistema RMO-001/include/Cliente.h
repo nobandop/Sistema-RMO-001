@@ -16,6 +16,7 @@ class Cliente{
         int nFacturas;
     public:
         Cliente();
+        void asignarFactura(Factura*);
         void leerCliente();
         void modificarCliente();
         void mostrarCliente();

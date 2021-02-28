@@ -21,7 +21,7 @@ int main(){
 	int nProductos=0,nClientes=0,nProveedores=0,nFacturas=0,nReportes=0,a;
 
 	bool salida = false;
-	int equivocacion=0,opc1,opc2,resp1,f,c;
+	int equivocacion=0,opc1,opc2,resp,f,c,ind,prod,warning = 0;
 	char nombre[30],nomu[20],contra[20],h;
 
 	do{
@@ -185,6 +185,111 @@ int main(){
                         cout<<"Elija una opcion: "; cin>>opc2;
                         switch(opc2){
                             case 1:
+                                if(nClientes > 0 and nProductos > 0){
+                                    cout<<"Codigo 'factura(#)': ";
+                                    fflush(stdin); gets(listaFacturas[nFacturas].codigoFactura);
+                                    cout<<"Fecha de factura (DD/MM/AA): ";
+                                    fflush(stdin); gets(listaFacturas[nFacturas].fechaFactura);
+                                    cout<<endl<<"Ahora debera elegir a que cliente agregar: "<<endl;
+                                    cout<<left;
+                                    cout<<setw(3)<<"#";
+                                    cout<<setw(17)<<"| Codigo";
+                                    cout<<setw(42)<<"| Nombre Completo";
+                                    cout<<setw(17)<<"| DNI";
+                                    cout<<setw(17)<<"| RUC";
+                                    cout<<setw(17)<<"| Telefono";
+                                    cout<<"|"<<endl;
+                                    for(int i = 0; i <= 113; i++){
+                                        cout<<"=";
+                                    }
+                                    cout<<endl;
+                                    for(int i = 0; i < nClientes; i++){
+                                        cout<<left<<setw(3)<<i+1;
+                                        listaClientes[i].mostrarCliente();
+                                    }
+                                    do{
+                                        cout<<endl<<"Ingrese numero (#) de la lista de clientes(1-"<<nClientes<<"): "; cin>>ind;
+                                    }while(ind > nClientes);
+                                    listaFacturas[nFacturas].asignarCliente(&listaClientes[ind-1]);                          //ASIGNACION DE FACTURAS
+                                    listaClientes[ind-1].asignarFactura(&listaFacturas[nFacturas]);
+                                    do{
+                                        cout<<"Cuantos productos comprara?(1-"<<nProductos<<"): "; cin>>prod;
+                                    }while(prod > nProductos);
+                                    for(int i = 0; i < prod; i++){
+                                        system("cls");
+                                        cout<<left;
+                                        cout<<setw(3)<<"#";
+                                        cout<<setw(17)<<"| Codigo";
+                                        cout<<setw(27)<<"| Nombre de Prod.";
+                                        cout<<setw(17)<<"| Cantidad";
+                                        cout<<setw(22)<<"| Categoria";
+                                        cout<<setw(17)<<"| Precio";
+                                        cout<<setw(22)<<"| Proveedor";
+                                        cout<<"|"<<endl;
+                                        for(int i = 0; i <= 125; i++){
+                                            cout<<"=";
+                                        }
+                                        cout<<endl;
+                                        for(int i = 0; i < nProductos; i++){
+                                            cout<<left<<setw(3)<<i+1;
+                                            listaProductos[i].mostrarProducto();
+                                        }
+                                        cout<<"Ingrese un (#) de la lista de productos: "; cin>>f;
+                                        cout<<endl;
+                                        if(f <= nProductos){
+                                            do{
+                                                if(warning > 0){
+                                                        cout<<"Ingrese una cantidad menor o igual a la existente: "; cin>>c;
+                                                }else{
+                                                    cout<<"Cantidad a comprar: "; cin>>c;
+                                                    warning = warning + 1;
+                                                }
+                                            }while(c > listaProductos[f-1].getCantProducto());
+                                            cout<<"Producto: "<<listaProductos[f-1].getNombre()<<",Cantidad: "<<c<<endl;
+                                            listaFacturas[nFacturas].desarrolloFactura(&listaProductos[f-1],c);
+                                            cout<<endl;
+                                            system("pause");
+                                        }else{
+                                            cout<<"Ingrese una fila correcta, hay "<<nProductos<<" filas."<<endl;
+                                            i=i-1;
+                                            system("pause");
+                                        }
+                                        warning = 0;
+                                    }
+                                    system("cls");
+                                    cout<<left;
+                                    cout<<setw(3)<<"#";
+                                    cout<<setw(17)<<"| Codigo";
+                                    cout<<setw(27)<<"| Nombre de Prod.";
+                                    cout<<setw(17)<<"| Cantidad";
+                                    cout<<setw(22)<<"| Categoria";
+                                    cout<<setw(17)<<"| Precio";
+                                    cout<<setw(22)<<"| Proveedor";
+                                    cout<<"|"<<endl;
+                                    for(int i = 0; i <= 125; i++){
+                                        cout<<"=";
+                                    }
+                                    cout<<endl;
+                                    for(int i = 0; i < nProductos; i++){
+                                        cout<<left<<setw(3)<<i+1;
+                                        listaProductos[i].mostrarProducto();
+                                    }
+                                    nFacturas = nFacturas + 1;
+                                    cout<<endl<<"Factura generada exitosamente!"<<endl;
+                                    cout<<endl;
+                                    system("pause");
+                                }else{
+                                    if(nProductos == 0){
+                                        cout<<"Necesita almenos un producto registrado."<<endl;
+                                    }
+                                    if(nClientes == 0){
+                                        cout<<"Necesita almenos un cliente registrado."<<endl;
+                                    }
+                                    cout<<endl;
+                                    system("pause");
+                                    resp = 3;
+                                }
+							break;
                             break;
                             case 2:
                             break;

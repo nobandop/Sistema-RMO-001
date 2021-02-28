@@ -12,6 +12,9 @@ Cliente::Cliente(){
     nFacturas = 0;
 }
 
+void Cliente::asignarFactura(Factura* fact){
+}
+
 void Cliente::leerCliente(){
     //cout<<"\tClientes: Registrar cliente."<<endl;
 //	cout<<"Codigo (Ejm.: 001): "; fflush(stdin); gets(codCli);
@@ -22,6 +25,10 @@ void Cliente::leerCliente(){
 	//cout<<"Telefono: "; cin>>telfCli;
 	//cout<<"\nRegistro exitoso."<<endl;
 	system("pause");
+}
+
+void Cliente::mostrarCliente(){
+
 }
 
 char* Cliente::getNomCliente(){

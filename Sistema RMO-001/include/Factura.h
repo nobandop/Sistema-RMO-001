@@ -8,16 +8,17 @@ using namespace std;
 
 class Cliente;
 class Factura{
-    private:
+    public:
         char codigoFactura[10];
         char fechaFactura[10];
         Cliente* cliente;
         Producto* producto[20];
         int nProductos = 0;
-        float subtotal = 0;
+        float totalPagar = 0;
     public:
         Factura();
         void leerFactura();
+        void desarrolloFactura(Producto*,int);
         void asignarCliente(Cliente*);
         void productosComprados();
         void mostrarFactura();

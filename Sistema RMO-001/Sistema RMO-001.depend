@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1614486701 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\main.cpp
+1614493094 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\main.cpp
 	<iostream>
 	<string.h>
 	<iomanip>
@@ -10,21 +10,21 @@
 	"Producto.h"
 	"Proveedor.h"
 
-1614483843 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\src\cliente.cpp
+1614493205 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\src\cliente.cpp
 	"Cliente.h"
 	<iostream>
 	<string.h>
 
-1614483843 c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\include\cliente.h
+1614492580 c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\include\cliente.h
 	<iostream>
 	"Factura.h"
 
-1614482804 c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\include\factura.h
+1614491137 c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\include\factura.h
 	<iostream>
 	"Cliente.h"
 	"Producto.h"
 
-1614485826 c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\include\producto.h
+1614492951 c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\include\producto.h
 	<iostream>
 	"Proveedor.h"
 
@@ -48,14 +48,14 @@
 	<string.h>
 	<fstream>
 
-1614487072 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\src\producto.cpp
+1614492951 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\src\producto.cpp
 	"Producto.h"
 	<iostream>
 	<string.h>
 	<iomanip>
 	<fstream>
 
-1614483860 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\src\factura.cpp
+1614492751 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\src\factura.cpp
 	"Factura.h"
 	<iomanip>
 	"string.h"

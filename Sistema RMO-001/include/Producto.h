@@ -12,6 +12,8 @@ class Producto{
         char categoriaProducto[20];
         int cantidadProducto;
         float precioProducto;
+        int cantidadSolicitada = 0;
+        float subtotal = 0;
         Proveedor* proveedor;
     public:
         Producto();
@@ -19,6 +21,15 @@ class Producto{
         void mostrarProducto();
         void modificarProducto(int);
         void asignarProveedor(Proveedor*);
+        void actualizarCantProductos(int);
+        void agregarSubTotal(int);
+        void agregarCantSolicitada(int);
+        char* getCodigo();
+        char* getNombre();
+        int getCantProducto();
+        int getCantsolicitada();
+        float getPrecio();
+        float getSubTotal();
 };
 
 #endif // PRODUCTO_H
