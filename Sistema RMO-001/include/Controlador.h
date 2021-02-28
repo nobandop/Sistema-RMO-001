@@ -2,12 +2,10 @@
 #define CONTROLADOR_H
 
 #include <iostream>
-#include <string.h>
 #include "Producto.h"
 #include "Proveedor.h"
 #include "Cliente.h"
 #include "Factura.h"
-#include "Reporte.h"
 using namespace std;
 
 class Producto;
@@ -15,9 +13,7 @@ class Proveedor;
 class Cliente;
 class Factura;
 class Reporte;
-
-class Controlador
-{
+class Controlador{
     private:
         char nombre[30];
         char nomusuario[20];
@@ -31,9 +27,9 @@ class Controlador
         Controlador();
         bool verificarAcceso(char*,char*);
         void asignarDatos();
-        void actualizarNombre();
-        void actualizarNomUsuario();
-        void actualizarContrasenia();
+        void actualizarNombre(char*);
+        void actualizarNomUsuario(char*);
+        void actualizarContrasenia(char*);
         void ordenar();
         void buscar();
 };

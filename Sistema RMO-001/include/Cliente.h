@@ -2,12 +2,10 @@
 #define CLIENTE_H
 
 #include <iostream>
-#include <string.h>
 #include "Factura.h"
 using namespace std;
 
 class Factura;
-
 class Cliente{
     private:
         char codigoCliente[7];

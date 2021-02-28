@@ -39,14 +39,12 @@
 		<Unit filename="include/Factura.h" />
 		<Unit filename="include/Producto.h" />
 		<Unit filename="include/Proveedor.h" />
-		<Unit filename="include/Reporte.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Cliente.cpp" />
 		<Unit filename="src/Controlador.cpp" />
 		<Unit filename="src/Factura.cpp" />
 		<Unit filename="src/Producto.cpp" />
 		<Unit filename="src/Proveedor.cpp" />
-		<Unit filename="src/Reporte.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

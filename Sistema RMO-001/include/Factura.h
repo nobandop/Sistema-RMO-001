@@ -2,13 +2,12 @@
 #define FACTURA_H
 
 #include <iostream>
-#include <string.h>
 #include "Cliente.h"
 #include "Producto.h"
 using namespace std;
 
-class Factura
-{
+class Cliente;
+class Factura{
     private:
         char codigoFactura[10];
         char fechaFactura[10];

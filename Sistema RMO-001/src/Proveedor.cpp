@@ -6,8 +6,7 @@
 
 using namespace std;
 
-Proveedor::Proveedor()
-{
+Proveedor::Proveedor(){
     strcpy(codigoProveedor,"-");
     strcpy(nombreProveedor,"-");
     strcpy(rucProveedor,"-");
@@ -15,40 +14,33 @@ Proveedor::Proveedor()
     strcpy(direccionProveedor,"-");
 }
 
-void Proveedor::leerProveedor()
-{
-    cout<<endl<<"Leer Proveedor"<<endl<<endl;
-    cout<<"Ingrese el codigo: ";cin.sync();gets(codigoProveedor);
-    cout<<"Ingrese el nombre: ";cin.sync();gets(nombreProveedor);
-    cout<<"Ingrese el RUC: ";cin.sync();gets(rucProveedor);
-    cout<<"Ingrese el telefono: ";cin.sync();cin>>telefonoProveedor;
-    cout<<"Ingrese la direccion: ";cin.sync();cin>>direccionProveedor;
+void Proveedor::leerProveedor(){
+    cout<<"Codigo (Ejm.: PROV-001): "; fflush(stdin); gets(codigoProveedor);
+	cout<<"Nombre: "; fflush(stdin); gets(nombreProveedor);
+	cout<<"RUC: "; fflush(stdin); gets(rucProveedor);
+	cout<<"Telefono: "; fflush(stdin); gets(telefonoProveedor);
+	cout<<"Direccion: "; fflush(stdin); gets(direccionProveedor);
 }
 
-void Proveedor::mostrarProveedor()
-{
-    cout<<"Codigo: "<<codigoProveedor<<endl;
-    cout<<"Nombre: "<<nombreProveedor<<endl;
-    cout<<"RUC: "<<rucProveedor<<endl;
-    cout<<"telefono: "<<telefonoProveedor<<endl;
-    cout<<"direccion: "<<direccionProveedor<<endl;
-
+void Proveedor::mostrarProveedor(){
     cout<<left;
     cout<<setw(15)<<codigoProveedor;
     cout<<setw(30)<<nombreProveedor;
     cout<<setw(20)<<rucProveedor;
-    cout<<setw(15)<<telefonoProveedor<<"| ";
-    cout<<setw(40)<<direccionProveedor<<"|";
+    cout<<setw(15)<<telefonoProveedor;
+    cout<<setw(40)<<direccionProveedor;
     cout<<endl;
 }
 
-void Proveedor::modificarProveedor()
-{
-    cout<<"en proceso..."<<endl;
-    system("pause");
+void Proveedor::modificarProveedor(int n){
+    switch(n){
+		case 1: cout<<"Codigo (Ejm: PROV-001): "; fflush(stdin); gets(codigoProveedor); cout<<"Modificacion exitosa."<<endl; break;
+		case 2: cout<<"Nombre: "; fflush(stdin); gets(nombreProveedor); cout<<"Modificacion exitosa."<<endl; break;
+		case 3: cout<<"RUC: "; fflush(stdin); gets(rucProveedor); cout<<"Modificacion exitosa."<<endl; break;
+		case 4: cout<<"Telefono: "; fflush(stdin); gets(telefonoProveedor); cout<<"Modificacion exitosa."<<endl; break;
+		case 5: cout<<"Direccion: "; fflush(stdin); gets(direccionProveedor); cout<<"Modificacion exitosa."<<endl; break;
+		default: cout<<"Opción incorrecta."; break;
+	}
 }
 
-char* Proveedor::getNomProveedor()
-{
-    return nombreProveedor;
-}
+char* Proveedor::getNomProveedor(){return nombreProveedor;}

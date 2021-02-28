@@ -2,8 +2,8 @@
 #include <fstream>
 
 Controlador::Controlador(){
-    ifstream archivo;
-    archivo.open("usuario.txt",ios::in | ios::binary);
+    strcpy(nomusuario,"admin");
+    strcpy(contrasenia,"admin");
 
 }
 
@@ -28,6 +28,12 @@ void Controlador::asignarDatos(){
     archivo.open("usuario.txt",ios::out);
 
     if(archivo.is_open()){
-        
+
     }
 }
+
+void Controlador::actualizarNombre(char* nom){strcpy(nombre,nom);}
+
+void Controlador::actualizarNomUsuario(char* nomu){strcpy(nomusuario,nomu);}
+
+void Controlador::actualizarContrasenia(char* contra){strcpy(contrasenia,contra);}
