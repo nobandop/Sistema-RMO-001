@@ -23,3 +23,7 @@ void Cliente::leerCliente(){
 	//cout<<"\nRegistro exitoso."<<endl;
 	system("pause");
 }
+
+char* Cliente::getNomCliente(){
+    return nombreCliente;
+}

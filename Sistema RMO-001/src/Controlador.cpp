@@ -1,4 +1,5 @@
 #include "Controlador.h"
+#include <string.h>
 #include <fstream>
 
 Controlador::Controlador(){

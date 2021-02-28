@@ -1,4 +1,5 @@
 #include "Factura.h"
+#include <iomanip>
 #include "string.h"
 
 Factura::Factura(){
@@ -13,6 +14,6 @@ void Factura::leerFactura(){
     cout<<"Fecha: ";cin.sync();gets(fechaFactura);
 }
 
-void Factura::mostrarFactura(){cout<<"| "<<left<<setw(15)<<codigoFactura<<"| "<<setw(40)<<cliente->nombreCliente<<"| "<<setw(15)<<fechaFactura<<"| "<<setw(15)<<subtotal<<"|"<<endl;}
+void Factura::mostrarFactura(){cout<<"| "<<left<<setw(15)<<codigoFactura<<"| "<<setw(40)<<cliente->getNomCliente()<<"| "<<setw(15)<<fechaFactura<<"| "<<setw(15)<<subtotal<<"|"<<endl;}
 
 void Factura::asignarCliente(Cliente* c){cliente = c;}

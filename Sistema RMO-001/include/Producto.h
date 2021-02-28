@@ -7,14 +7,14 @@ using namespace std;
 
 class Producto{
     private:
-        char codigoProducto[8];
+        char codigoProducto[12];
         char nombreProducto[30];
         char categoriaProducto[20];
         int cantidadProducto;
         float precioProducto;
         Proveedor* proveedor;
     public:
-        Producto(); 
+        Producto();
         void leerProducto();
         void mostrarProducto();
         void modificarProducto(int);

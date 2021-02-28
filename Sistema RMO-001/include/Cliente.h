@@ -20,6 +20,7 @@ class Cliente{
         void modificarCliente();
         void mostrarCliente();
         void verFacturas();
+        char* getNomCliente();
 };
 
 #endif // CLIENTE_H

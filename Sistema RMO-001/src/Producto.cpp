@@ -1,6 +1,7 @@
 #include "Producto.h"
 #include <iostream>
 #include <string.h>
+#include <iomanip>
 #include <fstream>
 
 using namespace std;
@@ -15,19 +16,20 @@ Producto::Producto(){
 
 void Producto::leerProducto(){
     cout<<"Codigo (Ejm.: PROD-001): "; fflush(stdin); gets(codigoProducto);
-	cout<<"Nombre: "; fflush(stdin); gets(nombreProducto);
-	cout<<"Categoria: "; fflush(stdin); gets(categoriaProducto);
+	cout<<"Nombre: "; gets(nombreProducto);
+	cout<<"Categoria: "; gets(categoriaProducto);
 	cout<<"Cantidad: "; cin.sync(); cin>>cantidadProducto;
 	cout<<"Precio Unitario: "; cin.sync(); cin>>precioProducto;
 }
 
 void Producto::mostrarProducto(){
-    cout<<"Codigo: "<<codigoProducto<<endl;
-    cout<<"Nombre: "<<nombreProducto<<endl;
-    cout<<"Categoria: "<<categoriaProducto<<endl;
-    cout<<"Cantidad: "<<cantidadProducto<<endl;
-    cout<<"Precio: "<<precioProducto<<endl;
-    cout<<"Proveedor: "<<proveedor->getNomProveedor()<<endl;
+    cout<<left<<"| ";
+    cout<<setw(15)<<codigoProducto<<"| ";
+    cout<<setw(25)<<nombreProducto<<"| ";
+    cout<<setw(15)<<cantidadProducto<<"| ";
+    cout<<setw(20)<<categoriaProducto<<"| ";
+    cout<<setw(15)<<precioProducto<<"| ";
+    cout<<setw(20)<<proveedor->getNomProveedor()<<"|"<<endl;
 }
 
 void Producto::modificarProducto(int n){

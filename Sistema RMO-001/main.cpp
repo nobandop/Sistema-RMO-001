@@ -18,7 +18,6 @@ int main(){
     Cliente listaClientes[50];
     Proveedor listaProveedores[50];
 	Factura listaFacturas[50];
-	Reporte listaReporte;
 	int nProductos=0,nClientes=0,nProveedores=0,nFacturas=0,nReportes=0,a;
 
 	bool salida = false;
