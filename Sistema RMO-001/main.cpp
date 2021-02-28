@@ -294,6 +294,10 @@ int main(){
                             case 2:
                             break;
                             case 3:
+                                listaClientes[nClientes].leerCliente();
+                                nClientes++;
+                                cout<<endl<<"Registro Exitoso!"<<endl;
+                                system("pause");
                             break;
                             case 4:
                             break;
