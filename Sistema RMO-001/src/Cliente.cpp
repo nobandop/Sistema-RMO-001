@@ -19,7 +19,7 @@ void Cliente::asignarFactura(Factura* fact){
 }
 
 void Cliente::leerCliente(){
-	cout<<"Codigo (Ejm.: 001): "; fflush(stdin); gets(codigoCliente);
+	cout<<"Codigo (Ejm.: cli-001): "; fflush(stdin); gets(codigoCliente);
 	cout<<"Nombre completo: "; gets(nombreCliente);
 	cout<<"DNI: "; gets(dniCliente);
 	cout<<"Telefono: "; gets(telefonoCliente);
@@ -27,7 +27,7 @@ void Cliente::leerCliente(){
 
 void Cliente::modificarCliente(int n){
     switch(n){
-		case 1: cout<<"Codigo (Ejm: 001): "; fflush(stdin); gets(codigoCliente); cout<<"Modificacion exitosa."<<endl; break;
+		case 1: cout<<"Codigo (Ejm: cli-001): "; fflush(stdin); gets(codigoCliente); cout<<"Modificacion exitosa."<<endl; break;
 		case 2: cout<<"Nombre completo: "; fflush(stdin); gets(nombreCliente); cout<<"Modificacion exitosa."<<endl; break;
 		case 3: cout<<"DNI: "; fflush(stdin); gets(dniCliente); cout<<"Modificacion exitosa."<<endl; break;
 		case 4: cout<<"Telefono: "; fflush(stdin); gets(telefonoCliente); cout<<"Modificacion exitosa."<<endl; break;

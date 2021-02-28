@@ -179,9 +179,8 @@ int main(){
                         cout<<"2. Ver Lista de Facturas"<<endl;
                         cout<<"3. Registrar Clientes"<<endl;
                         cout<<"4. Ver Lista de Clientes"<<endl;
-                        cout<<"5. Modificar Clientes"<<endl;
-                        cout<<"6. Generar Reporte de Ventas"<<endl;
-                        cout<<"7. Salir"<<endl;
+                        cout<<"5. Generar Reporte de Ventas"<<endl;
+                        cout<<"6. Salir"<<endl;
                         cout<<"Elija una opcion: "; cin>>opc2;
                         switch(opc2){
                             case 1:
@@ -289,7 +288,6 @@ int main(){
                                     system("pause");
                                     resp = 3;
                                 }
-							break;
                             break;
                             case 2:
                             break;
@@ -300,10 +298,32 @@ int main(){
                                 system("pause");
                             break;
                             case 4:
+                                do{
+                                    system("cls");
+                                    cout<<left;
+                                    cout<<setw(14)<<"| Codigo(1)";
+                                    cout<<setw(42)<<"| Nombre(2)";
+                                    cout<<setw(17)<<"| DNI(3)";
+                                    cout<<setw(17)<<"| Telefono(4)"<<"|";
+                                    cout<<endl;
+                                    for(int i = 0; i <= 90; i++){
+                                        cout<<"=";
+                                    }
+                                    cout<<endl;
+                                    for(int i = 0; i < nClientes; i++){
+                                        listaClientes[i].mostrarCliente();
+                                    }
+                                    cout<<endl<<"Quieres Modificar? [S/N]: ";cin>>h;
+                                    if(h=='S'||h=='s'){
+                                        cout<<"Fila: "; cin>>f;
+                                        if(f <= nClientes){
+                                            cout<<"Columna: "; cin>>c;
+                                            listaClientes[f-1].modificarCliente(c);
+                                        }else{cout<<"\nIngrese una fila correcta, hay "<<nClientes<<" filas."<<endl;system("pause");}
+                                    }
+                                }while(h == 'S' ||h == 's');
                             break;
                             case 5:
-                            break;
-                            case 6:
                                 system("cls");
                                 cout<<"==================================="<<endl;
                                 cout<<"|Opcion: Generar Reporte de ventas|"<<endl;
@@ -315,7 +335,7 @@ int main(){
                                 }
                                 system("pause");
                             break;
-                            case 7: break;
+                            case 6: break;
                             default: cout<<"\nNo ingreso una opcion correcta."<<endl; system("pause"); break;
                         }
                     break;
