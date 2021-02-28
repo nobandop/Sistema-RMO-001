@@ -6,10 +6,10 @@ using namespace std;
 
 class Proveedor{
     private:
-        char codigoProveedor[8];
+        char codigoProveedor[12];
         char nombreProveedor[30];
         char rucProveedor[20];
-        char telefonoProveedor[9];
+        char telefonoProveedor[12];
         char direccionProveedor[40];
     public:
         Proveedor();

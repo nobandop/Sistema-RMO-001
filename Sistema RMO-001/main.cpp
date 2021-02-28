@@ -57,7 +57,7 @@ int main(){
                                 cout<<"============================="<<endl;
                                 listaProductos[nProductos].leerProducto();
                                 if(nProveedores == 0){        //si no existen proveedores
-                                    cout<<"\nNo se han registrado proveedores aun."<<endl;
+                                    cout<<"\nNo se han registrado proveedores aun."<<endl<<endl;
                                     cout<<"Ingrese los datos del proveedor: "<<endl;
                                     listaProveedores[nProveedores].leerProveedor();
                                     listaProductos[nProductos].asignarProveedor(&listaProveedores[nProveedores]);

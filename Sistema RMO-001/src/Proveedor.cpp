@@ -15,20 +15,20 @@ Proveedor::Proveedor(){
 }
 
 void Proveedor::leerProveedor(){
-    cout<<"Codigo (Ejm.: PROV-001): "; fflush(stdin); gets(codigoProveedor);
-	cout<<"Nombre: "; fflush(stdin); gets(nombreProveedor);
-	cout<<"RUC: "; fflush(stdin); gets(rucProveedor);
-	cout<<"Telefono: "; fflush(stdin); gets(telefonoProveedor);
-	cout<<"Direccion: "; fflush(stdin); gets(direccionProveedor);
+    cout<<"Codigo (Ejm.: PROV-001): ";fflush(stdin); gets(codigoProveedor);
+	cout<<"Nombre: "; gets(nombreProveedor);
+	cout<<"RUC: "; gets(rucProveedor);
+	cout<<"Telefono: "; gets(telefonoProveedor);
+	cout<<"Direccion: "; gets(direccionProveedor);
 }
 
 void Proveedor::mostrarProveedor(){
-    cout<<left;
-    cout<<setw(15)<<codigoProveedor;
-    cout<<setw(30)<<nombreProveedor;
-    cout<<setw(20)<<rucProveedor;
-    cout<<setw(15)<<telefonoProveedor;
-    cout<<setw(40)<<direccionProveedor;
+    cout<<left<<"| ";
+    cout<<setw(15)<<codigoProveedor<<"| ";
+    cout<<setw(20)<<nombreProveedor<<"| ";
+    cout<<setw(15)<<rucProveedor<<"| ";
+    cout<<setw(15)<<telefonoProveedor<<"| ";
+    cout<<setw(40)<<direccionProveedor<<"| ";
     cout<<endl;
 }
 
