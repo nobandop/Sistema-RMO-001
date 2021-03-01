@@ -273,7 +273,7 @@ int main(){
                                         cout<<left<<setw(3)<<i+1;
                                         listaProductos[i].mostrarProducto();
                                     }
-                                    nFacturas = nFacturas + 1;
+                                    nFacturas ++;
                                     cout<<endl<<"Factura generada exitosamente!"<<endl;
                                     cout<<endl;
                                     system("pause");
@@ -286,7 +286,6 @@ int main(){
                                     }
                                     cout<<endl;
                                     system("pause");
-                                    resp = 3;
                                 }
                             break;
                             case 2:
@@ -328,9 +327,9 @@ int main(){
                                 cout<<"==================================="<<endl;
                                 cout<<"|Opcion: Generar Reporte de ventas|"<<endl;
                                 cout<<"==================================="<<endl<<"\n";
-                                cout<<left<<setw(15)<<"| Codigo "<<setw(40)<<"| Nombre del cliente "<<setw(15)<<"| Fecha "<<setw(15)<<"| Monto "<<endl;
+                                cout<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
                                 for(int i = 0; i <= 85; i++){cout<<"=";} cout<<endl;
-                                for(int i = 0; i <= nFacturas; i++){
+                                for(int i = 0; i < nFacturas; i++){
                                     listaFacturas[i].mostrarFactura();
                                 }
                                 system("pause");

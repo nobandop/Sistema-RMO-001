@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1614555220 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\main.cpp
+1614557282 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\main.cpp
 	<iostream>
 	<string.h>
 	<iomanip>
@@ -56,7 +56,7 @@
 	<iomanip>
 	<fstream>
 
-1614492751 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\src\factura.cpp
+1614557282 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\src\factura.cpp
 	"Factura.h"
 	<iomanip>
 	"string.h"
