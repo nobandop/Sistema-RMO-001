@@ -386,7 +386,6 @@ int main(){
             system("pause");
 		}
 	}while((equivocacion!=3)&&(salida==false));
-
     return 0;
 }
 
