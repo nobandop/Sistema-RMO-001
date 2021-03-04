@@ -20,28 +20,14 @@ int main(){
     Cliente listaClientes[50],auxCliente;
     Proveedor listaProveedores[50],auxProveedor;
 	Factura listaFacturas[50];
-	int nProductos=0,nClientes=0,nProveedores=0,nFacturas=0,nReportes=0,a;
+	int nProductos=0,nClientes=0,nProveedores=0,nFacturas=0,a;
 
 	bool salida = false;
-	int equivocacion=0,opc1,opc2,resp,f,c,ind,prod,warning = 0,cuantos;
+	int equivocacion=0,opc1,opc2,resp,f,c,ind,prod,warning = 0;
 	string nombre,nomu,contra;
-    char h,aux;
+    char h;
 
     ofstream archivo;
-
-    /* archivo.open("usuario.txt");
-    if(archivo.is_open()){
-        getline(archivo,nombre);
-        archivo.get(aux);
-        getline(archivo,nomu);
-        archivo.get(aux);
-        getline(archivo,contra);
-        principal.asignarDatos(nombre,nomu,contra);
-        archivo.close();
-    }else{
-        cout<<"No se ha podido abrir el archivo"<<endl;
-    }
- */
 	do{
         titulo();
 		cout<<"Ingrese su nombre de usuario: "; cin>>nomu;
@@ -448,14 +434,18 @@ int main(){
                                 cout<<"|Opcion: Generar Reporte de ventas|"<<endl;
                                 cout<<"==================================="<<endl<<"\n";
                                 cout<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
-                                for(int i = 0; i <= 85; i++){cout<<"=";} cout<<endl;
+                                for(int i = 0; i <= 91; i++){cout<<"=";} cout<<endl;
                                 for(int i = 0; i < nFacturas; i++){listaFacturas[i].mostrarFactura();}
 
                                 archivo.open("reporte.txt");
-                                archivo<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
-                                for(int i = 0; i <= 85; i++){archivo<<"=";} archivo<<endl;
-                                for(int i = 0; i < nFacturas; i++){
-                                    archivo<<left<<setw(17)<<listaFacturas[i].getCodigo()<<setw(42)<<listaFacturas[i].mostraCliente()<<setw(17)<<listaFacturas[i].getFecha()<<setw(15)<<listaFacturas[i].getMonto()<<endl;
+                                if(archivo.is_open()){
+                                    archivo<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
+                                    for(int i = 0; i <= 91; i++){archivo<<"=";} archivo<<endl;
+                                    for(int i = 0; i < nFacturas; i++){
+                                        archivo<<left<<setw(17)<<listaFacturas[i].getCodigo()<<setw(42)<<listaFacturas[i].mostraCliente()<<setw(17)<<listaFacturas[i].getFecha()<<setw(15)<<listaFacturas[i].getMonto()<<endl;
+                                    }
+                                }else{
+                                    cout<<"No se pudo abrir el archivo."<<endl;
                                 }
                                 archivo.close();
                                 system("pause");
@@ -499,7 +489,7 @@ int main(){
                         }
                     break;
                     case 4: salida=true; system("pause"); break;
-                    default: cout<<"\nNo ingreso una opcion correcta."<<endl; system("pause"); break;
+                    //default: cout<<"\nNo ingreso una opcion correcta."<<endl; system("pause"); break;
                 }
             }while(salida==false);
 		}else{
