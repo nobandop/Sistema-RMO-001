@@ -19,18 +19,18 @@ void Cliente::asignarFactura(Factura* fact){
 }
 
 void Cliente::leerCliente(){
-	cout<<"Codigo (Ejm.: CLI-001): "; cin>>codigoCliente;
-	cout<<"Nombre completo: "; cin>>nombreCliente;
-	cout<<"DNI: "; cin>>dniCliente;
-	cout<<"Telefono: "; cin>>telefonoCliente;
+	cout<<"Codigo (Ejm.: CLI-001): "; fflush(stdin); getline(cin,codigoCliente);
+	cout<<"Nombre completo: "; getline(cin,nombreCliente);
+	cout<<"DNI: "; getline(cin,dniCliente);
+	cout<<"Telefono: "; getline(cin,telefonoCliente);
 }
 
 void Cliente::modificarCliente(int n){
     switch(n){
-		case 1: cout<<"Codigo (Ejm: cli-001): "; cin>>codigoCliente; cout<<"Modificacion exitosa."<<endl; break;
-		case 2: cout<<"Nombre completo: "; cin>>nombreCliente; cout<<"Modificacion exitosa."<<endl; break;
-		case 3: cout<<"DNI: "; cin>>dniCliente; cout<<"Modificacion exitosa."<<endl; break;
-		case 4: cout<<"Telefono: "; cin>>telefonoCliente; cout<<"Modificacion exitosa."<<endl; break;
+		case 1: cout<<"Codigo (Ejm: cli-001): "; fflush(stdin); getline(cin,codigoCliente); cout<<"Modificacion exitosa."<<endl; break;
+		case 2: cout<<"Nombre completo: "; fflush(stdin); getline(cin,nombreCliente); cout<<"Modificacion exitosa."<<endl; break;
+		case 3: cout<<"DNI: "; fflush(stdin); getline(cin,dniCliente); cout<<"Modificacion exitosa."<<endl; break;
+		case 4: cout<<"Telefono: "; fflush(stdin); getline(cin,telefonoCliente); cout<<"Modificacion exitosa."<<endl; break;
 		default: cout<<"Opcion incorrecta."; break;
 	}
 }

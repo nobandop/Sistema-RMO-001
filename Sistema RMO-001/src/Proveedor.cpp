@@ -34,11 +34,11 @@ void Proveedor::mostrarProveedor(){
 
 void Proveedor::modificarProveedor(int n){
     switch(n){
-		case 1: cout<<"Codigo (Ejm: PROV-001): "; cin>>codigoProveedor; cout<<"Modificacion exitosa."<<endl; break;
-		case 2: cout<<"Nombre: "; cin>>nombreProveedor; cout<<"Modificacion exitosa."<<endl; break;
-		case 3: cout<<"RUC: "; cin>>rucProveedor; cout<<"Modificacion exitosa."<<endl; break;
-		case 4: cout<<"Telefono: "; cin>>telefonoProveedor; cout<<"Modificacion exitosa."<<endl; break;
-		case 5: cout<<"Direccion: "; cin>>direccionProveedor; cout<<"Modificacion exitosa."<<endl; break;
+		case 1: cout<<"Codigo (Ejm: PROV-001): "; fflush(stdin); getline(cin,codigoProveedor); cout<<"Modificacion exitosa."<<endl; break;
+		case 2: cout<<"Nombre: "; fflush(stdin); getline(cin,nombreProveedor); cout<<"Modificacion exitosa."<<endl; break;
+		case 3: cout<<"RUC: "; fflush(stdin); getline(cin,rucProveedor); cout<<"Modificacion exitosa."<<endl; break;
+		case 4: cout<<"Telefono: "; fflush(stdin); getline(cin,telefonoProveedor); cout<<"Modificacion exitosa."<<endl; break;
+		case 5: cout<<"Direccion: "; fflush(stdin); getline(cin,direccionProveedor); cout<<"Modificacion exitosa."<<endl; break;
 		default: cout<<"Opción incorrecta."; break;
 	}
 }

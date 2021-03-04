@@ -12,8 +12,8 @@ Factura::Factura(){
 }
 
 void Factura::leerFactura(){
-    cout<<"Codigo: "; fflush(stdin); cin>>codigoFactura;
-    cout<<"Fecha: "; cin>>fechaFactura;
+    cout<<"Codigo: "; fflush(stdin); getline(cin,codigoFactura);
+    cout<<"Fecha: "; getline(cin,fechaFactura);
 }
 
 void Factura::desarrolloFactura(Producto* p,int c){
