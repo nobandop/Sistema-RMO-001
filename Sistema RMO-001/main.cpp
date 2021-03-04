@@ -24,7 +24,7 @@ int main(){
 
 	bool salida = false;
 	int equivocacion=0,opc1,opc2,resp,f,c,ind,prod,warning = 0;
-	string nombre,nomu,contra;
+	string nombre,nomu,contra,codigoProd,nombreProd;
     char h;
 
     ofstream archivo;
@@ -52,7 +52,8 @@ int main(){
                         cout<<"3. Registrar Proveedor"<<endl;
                         cout<<"4. Ver Lista de Proveedores"<<endl;
                         cout<<"5. Modo de ordenacion"<<endl;
-                        cout<<"6. Salir"<<endl;
+                        cout<<"6. Busqueda de un Producto"<<endl;
+                        cout<<"7. Salir"<<endl;
                         cout<<"Elija una opcion: "; cin>>opc2;
                         switch(opc2){
                             case 1:
@@ -210,19 +211,6 @@ int main(){
                                             }
                                             cout<<"Proveedores ordenados por el codigo..."<<endl;
                                         }
-                                        if(nClientes>1){
-                                            for(int i = 1; i < nClientes; i++){
-                                                for(int j = 0; j < nClientes-i;j++){
-                                                    if(cadenaNum(listaClientes[j].getCodigo()) > cadenaNum(listaClientes[j+1].getCodigo())){
-                                                        auxCliente = listaClientes[j];
-                                                        listaClientes[j] = listaClientes[j+1];
-                                                        listaClientes[j+1] = auxCliente;
-                                                    }
-                                                }
-                                            }
-                                        cout<<"Clientes ordenados por el codigo..."<<endl;
-                                        }
-
                                         cout<<endl;system("pause");
                                     case 2:                 //Ordenacion por nombre
                                         if(nProductos>1){
@@ -248,24 +236,49 @@ int main(){
                                                 }
                                             }
                                             cout<<"Proveedores ordenados por el nombre..."<<endl;
-                                        }
-                                        if(nClientes>1){
-                                            for(int i = 1; i < nClientes; i++){
-                                                for(int j = 0; j < nClientes-i;j++){
-                                                    if(nombreNum(listaClientes[j].getNombre()) > nombreNum(listaClientes[j+1].getNombre())){
-                                                        auxCliente = listaClientes[j];
-                                                        listaClientes[j] = listaClientes[j+1];
-                                                        listaClientes[j+1] = auxCliente;
-                                                    }
-                                                }
-                                            }
-                                            cout<<"Clientes ordenados por el nombre..."<<endl;
-                                        }
+                                        }                                        
                                         cout<<endl;system("pause");
                                     case 3: break;
                                 }
                             break;
-                            case 6: break;
+                            case 6: 
+                                system("cls");
+                                cout<<"================================="<<endl;
+                                cout<<"|Opcion: Búsqueda de un producto|"<<endl;
+                                cout<<"================================="<<endl<<"\n";
+                                cout<<"1. Busqueda por codigo"<<endl;
+                                cout<<"2. Busqueda por nombre"<<endl;
+                                cout<<"3. Salir"<<endl;
+                                cout<<"Elija una opcion: ";cin>>resp;
+                                switch(resp){
+                                    case 1:
+                                        cout<<"Ingrese el codigo del producto: "; fflush(stdin); getline(cin,codigoProd);
+                                        if(nProductos>1){
+                                            for(int i = 0; i < nProductos; i++){
+                                                if(cadenaNum(listaProductos[i].getCodigo()) == cadenaNum(codigoProd)){
+                                                        cout<<left<<setw(17)<<"| Codigo (1)"<<setw(27)<<"| Nombre (2)"<<setw(17)<<"| Cantidad (3)"<<setw(22)<<"| Categoria (4)"<<setw(17)<<"| Precio (5)"<<setw(22)<<"| Proveedor (6)"<<"|"<<endl;
+                                                        for(int i = 0; i <= 122; i++){cout<<"=";}
+                                                        cout<<endl;
+                                                        listaProductos[i].mostrarProducto();
+                                                }
+                                            }
+                                        }
+                                    break;
+                                    case 2:
+                                        cout<<"Ingrese el nombre del producto: "; fflush(stdin); getline(cin,nombreProd);
+                                        if(nProductos>1){
+                                            for(int i = 0; i < nProductos; i++){
+                                                if(listaProductos[i].getNombre() == nombreProd){
+                                                        cout<<left<<setw(17)<<"| Codigo (1)"<<setw(27)<<"| Nombre (2)"<<setw(17)<<"| Cantidad (3)"<<setw(22)<<"| Categoria (4)"<<setw(17)<<"| Precio (5)"<<setw(22)<<"| Proveedor (6)"<<"|"<<endl;
+                                                        for(int i = 0; i <= 122; i++){cout<<"=";}
+                                                        cout<<endl;
+                                                        listaProductos[i].mostrarProducto();
+                                                }
+                                            }
+                                        }
+                                    break;
+                                    case 3: break;}
+                            case 7: break;
                             default: cout<<"\nNo ingreso una opcion correcta."<<endl; system("pause"); break;
                         }
                     break;
@@ -278,6 +291,7 @@ int main(){
                         cout<<"2. Ver Lista de Facturas"<<endl;
                         cout<<"3. Registrar Clientes"<<endl;
                         cout<<"4. Ver Lista de Clientes"<<endl;
+                        cout<<"5. Método de Ordenamiento"<<endl;
                         cout<<"5. Generar Reporte de Ventas"<<endl;
                         cout<<"6. Salir"<<endl;
                         cout<<"Elija una opcion: "; cin>>opc2;
@@ -427,8 +441,51 @@ int main(){
                                         }else{cout<<"\nIngrese una fila correcta, hay "<<nClientes<<" filas."<<endl;system("pause");}
                                     }
                                 }while(h == 'S' ||h == 's');
-                            break;
+                            break;                            
                             case 5:
+                                system("cls");
+                                cout<<"================================"<<endl;
+                                cout<<"|Opcion: Método de Ordenamiento|"<<endl;
+                                cout<<"================================"<<endl;
+                                cout<<"1. Ordenar por codigo"<<endl;
+                                cout<<"2. Ordenar por nombre"<<endl;
+                                cout<<"3. Salir"<<endl;
+                                cin>>resp;
+                                switch(resp){
+                                    case 1:         //por codigo
+                                        if(nClientes>1){
+                                            for(int i = 1; i < nClientes; i++){
+                                                for(int j = 0; j < nClientes-i;j++){
+                                                    if(cadenaNum(listaClientes[j].getCodigo()) > cadenaNum(listaClientes[j+1].getCodigo())){
+                                                        auxCliente = listaClientes[j];
+                                                        listaClientes[j] = listaClientes[j+1];
+                                                        listaClientes[j+1] = auxCliente;
+                                                    }
+                                                }
+                                            }
+                                            cout<<"Clientes ordenados por el código..."<<endl;
+                                        }
+                                    break;
+                                    case 2:
+                                        if(nClientes>1){
+                                            for(int i = 1; i < nClientes; i++){
+                                                for(int j = 0; j < nClientes-i;j++){
+                                                    if(nombreNum(listaClientes[j].getNombre()) > nombreNum(listaClientes[j+1].getNombre())){
+                                                        auxCliente = listaClientes[j];
+                                                        listaClientes[j] = listaClientes[j+1];
+                                                        listaClientes[j+1] = auxCliente;
+                                                    }
+                                                }
+                                            }
+                                            cout<<"Clientes ordenados por el nombre..."<<endl;
+                                        }                                        
+                                        cout<<endl;system("pause");
+                                    case 3: break;
+                                    default: cout<<"\nNo ingreso una opcion correcta."<<endl; system("pause"); break;   
+                                }
+                                system("pause");
+                            break;
+                            case 6:
                                 system("cls");
                                 cout<<"==================================="<<endl;
                                 cout<<"|Opcion: Generar Reporte de ventas|"<<endl;
@@ -450,7 +507,7 @@ int main(){
                                 archivo.close();
                                 system("pause");
                             break;
-                            case 6: break;
+                            case 7: break;
                             default: cout<<"\nNo ingreso una opcion correcta."<<endl; system("pause"); break;
                         }
                     break;
