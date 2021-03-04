@@ -73,7 +73,7 @@
 	<fstream>
 	<iomanip>
 
-1614868271 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\main.cpp
+1614872595 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\main.cpp
 	<iostream>
 	<string.h>
 	<iomanip>
@@ -124,7 +124,7 @@
 	<string.h>
 	"Factura.h"
 
-1614859788 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\factura.cpp
+1614869939 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\factura.cpp
 	"Factura.h"
 	<iostream>
 	<iomanip>
