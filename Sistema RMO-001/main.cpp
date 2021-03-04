@@ -12,6 +12,7 @@ using namespace std;
 
 void titulo();
 int cadenaNum(string);
+int nombreNum(string);
 
 int main(){
     Controlador principal;
@@ -199,39 +200,82 @@ int main(){
                                 cin>>resp;
                                 switch(resp){
                                     case 1:                 //Ordenacion por codigo
-                                        for(int i = 1; i < nProductos; i++){
-                                            for(int j = 0; j < nProductos-i;j++){
-                                                if(cadenaNum(listaProductos[j].getCodigo()) > cadenaNum(listaProductos[j+1].getCodigo())){
-                                                    auxProducto = listaProductos[j];
-                                                    listaProductos[j] = listaProductos[j+1];
-                                                    listaProductos[j+1] = auxProducto;
+                                        if(nProductos>1){
+                                            for(int i = 1; i < nProductos; i++){
+                                                for(int j = 0; j < nProductos-i;j++){
+                                                    if(cadenaNum(listaProductos[j].getCodigo()) > cadenaNum(listaProductos[j+1].getCodigo())){
+                                                        auxProducto = listaProductos[j];
+                                                        listaProductos[j] = listaProductos[j+1];
+                                                        listaProductos[j+1] = auxProducto;
+                                                    }
                                                 }
                                             }
+                                            cout<<"Productos ordenados por el codigo..."<<endl;
                                         }
-                                        cout<<"Productos ordenados por codigo..."<<endl;
-                                        for(int i = 1; i < nProveedores; i++){
-                                            for(int j = 0; j < nProveedores-i;j++){
-                                                if(cadenaNum(listaProveedores[j].getCodigo()) > cadenaNum(listaProveedores[j+1].getCodigo())){
-                                                    auxProveedor = listaProveedores[j];
-                                                    listaProveedores[j] = listaProveedores[j+1];
-                                                    listaProveedores[j+1] = auxProveedor;
+                                        if(nProveedores>1){
+                                            for(int i = 1; i < nProveedores; i++){
+                                                for(int j = 0; j < nProveedores-i;j++){
+                                                    if(cadenaNum(listaProveedores[j].getCodigo()) > cadenaNum(listaProveedores[j+1].getCodigo())){
+                                                        auxProveedor = listaProveedores[j];
+                                                        listaProveedores[j] = listaProveedores[j+1];
+                                                        listaProveedores[j+1] = auxProveedor;
+                                                    }
                                                 }
                                             }
+                                            cout<<"Proveedores ordenados por el codigo..."<<endl;
                                         }
-                                        cout<<"Proveedores ordenados por codigo..."<<endl;
-                                        for(int i = 1; i < nClientes; i++){
-                                            for(int j = 0; j < nClientes-i;j++){
-                                                if(cadenaNum(listaClientes[j].getCodigo()) > cadenaNum(listaClientes[j+1].getCodigo())){
-                                                    auxCliente = listaClientes[j];
-                                                    listaClientes[j] = listaClientes[j+1];
-                                                    listaClientes[j+1] = auxCliente;
+                                        if(nClientes>1){
+                                            for(int i = 1; i < nClientes; i++){
+                                                for(int j = 0; j < nClientes-i;j++){
+                                                    if(cadenaNum(listaClientes[j].getCodigo()) > cadenaNum(listaClientes[j+1].getCodigo())){
+                                                        auxCliente = listaClientes[j];
+                                                        listaClientes[j] = listaClientes[j+1];
+                                                        listaClientes[j+1] = auxCliente;
+                                                    }
                                                 }
                                             }
+                                        cout<<"Clientes ordenados por el codigo..."<<endl;
                                         }
-                                        cout<<"Clientes ordenados por codigo..."<<endl;
+
                                         cout<<endl;system("pause");
                                     case 2:                 //Ordenacion por nombre
-
+                                        if(nProductos>1){
+                                            for(int i = 1; i < nProductos; i++){
+                                                for(int j = 0; j < nProductos-i;j++){
+                                                    if(nombreNum(listaProductos[j].getNombre()) > nombreNum(listaProductos[j+1].getNombre())){
+                                                        auxProducto = listaProductos[j];
+                                                        listaProductos[j] = listaProductos[j+1];
+                                                        listaProductos[j+1] = auxProducto;
+                                                    }
+                                                }
+                                            }
+                                            cout<<"Productos ordenados por el nombre..."<<endl;
+                                        }
+                                        if(nProveedores>1){
+                                            for(int i = 1; i < nProveedores; i++){
+                                                for(int j = 0; j < nProveedores-i;j++){
+                                                    if(nombreNum(listaProveedores[j].getNombre()) > nombreNum(listaProveedores[j+1].getNombre())){
+                                                        auxProveedor = listaProveedores[j];
+                                                        listaProveedores[j] = listaProveedores[j+1];
+                                                        listaProveedores[j+1] = auxProveedor;
+                                                    }
+                                                }
+                                            }
+                                            cout<<"Proveedores ordenados por el nombre..."<<endl;
+                                        }
+                                        if(nClientes>1){
+                                            for(int i = 1; i < nClientes; i++){
+                                                for(int j = 0; j < nClientes-i;j++){
+                                                    if(nombreNum(listaClientes[j].getNombre()) > nombreNum(listaClientes[j+1].getNombre())){
+                                                        auxCliente = listaClientes[j];
+                                                        listaClientes[j] = listaClientes[j+1];
+                                                        listaClientes[j+1] = auxCliente;
+                                                    }
+                                                }
+                                            }
+                                            cout<<"Clientes ordenados por el nombre..."<<endl;
+                                        }
+                                        cout<<endl;system("pause");
                                     case 3: break;
                                 }
                             break;
@@ -485,4 +529,34 @@ int cadenaNum(string cadena){
     string subcadena=cadena.substr(5,8);
     int numero=stoi(subcadena);
     return numero;
+}
+
+int nombreNum(string cadena){
+    string subcadena=cadena.substr(0,1);
+    if(subcadena=="A"||subcadena=="a"){return 1;}
+    if(subcadena=="B"||subcadena=="b"){return 2;}
+    if(subcadena=="C"||subcadena=="c"){return 3;}
+    if(subcadena=="D"||subcadena=="d"){return 4;}
+    if(subcadena=="E"||subcadena=="e"){return 5;}
+    if(subcadena=="F"||subcadena=="f"){return 6;}
+    if(subcadena=="G"||subcadena=="g"){return 7;}
+    if(subcadena=="H"||subcadena=="h"){return 8;}
+    if(subcadena=="I"||subcadena=="i"){return 9;}
+    if(subcadena=="J"||subcadena=="j"){return 10;}
+    if(subcadena=="K"||subcadena=="k"){return 11;}
+    if(subcadena=="L"||subcadena=="l"){return 12;}
+    if(subcadena=="M"||subcadena=="m"){return 13;}
+    if(subcadena=="N"||subcadena=="n"){return 14;}
+    if(subcadena=="O"||subcadena=="o"){return 15;}
+    if(subcadena=="P"||subcadena=="p"){return 16;}
+    if(subcadena=="Q"||subcadena=="q"){return 17;}
+    if(subcadena=="R"||subcadena=="r"){return 18;}
+    if(subcadena=="S"||subcadena=="s"){return 19;}
+    if(subcadena=="T"||subcadena=="t"){return 20;}
+    if(subcadena=="U"||subcadena=="u"){return 21;}
+    if(subcadena=="V"||subcadena=="v"){return 22;}
+    if(subcadena=="W"||subcadena=="w"){return 23;}
+    if(subcadena=="X"||subcadena=="x"){return 24;}
+    if(subcadena=="Y"||subcadena=="y"){return 25;}
+    if(subcadena=="Z"||subcadena=="z"){return 26;}
 }
