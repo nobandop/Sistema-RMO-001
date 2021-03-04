@@ -1,2 +1,3 @@
 | Codigo         | Nombre del cliente                      | Fecha          | Monto        |
 ============================================================================================
+| f-001          | Jhon Kenedy Mamani Huanacuni            | dd/mm/aa       | 18           |
