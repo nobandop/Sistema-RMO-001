@@ -197,7 +197,7 @@ int main(){
                                     case 1:
                                         principal.ordenarProductos(listaProductos,nProductos);                                        
                                     case 2:
-                                    case 3:
+                                    case 3: 
                                     case 4: break;
                                 }
                             break;
@@ -324,7 +324,7 @@ int main(){
                                 }
                             break;
                             case 2:
-                            system("cls");
+                                system("cls");
                                 cout<<"============================"<<endl;
                                 cout<<"|Opcion: Ver lista Facturas|"<<endl;
                                 cout<<"============================"<<endl<<"\n";
@@ -351,13 +351,9 @@ int main(){
                                     cout<<setw(17)<<"| DNI(3)";
                                     cout<<setw(17)<<"| Telefono(4)"<<"|";
                                     cout<<endl;
-                                    for(int i = 0; i <= 90; i++){
-                                        cout<<"=";
-                                    }
+                                    for(int i = 0; i <= 90; i++){cout<<"=";}
                                     cout<<endl;
-                                    for(int i = 0; i < nClientes; i++){
-                                        listaClientes[i].mostrarCliente();
-                                    }
+                                    for(int i = 0; i < nClientes; i++){listaClientes[i].mostrarCliente();}
                                     cout<<endl<<"Quieres Modificar? [S/N]: ";cin>>h;
                                     if(h=='S'||h=='s'){
                                         cout<<"Fila: "; cin>>f;
@@ -375,16 +371,15 @@ int main(){
                                 cout<<"==================================="<<endl<<"\n";
                                 cout<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
                                 for(int i = 0; i <= 85; i++){cout<<"=";} cout<<endl;
-                                for(int i = 0; i < nFacturas; i++){
-                                    listaFacturas[i].mostrarFactura();
-                                }
-                                ofstream archivo;
+                                for(int i = 0; i < nFacturas; i++){listaFacturas[i].mostrarFactura();}
+                                //ofstream archivo;
                                 archivo.open("reporte.txt");
                                 archivo<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
                                 for(int i = 0; i <= 85; i++){archivo<<"=";} archivo<<endl;
                                 for(int i = 0; i < nFacturas; i++){
                                     archivo<<listaFacturas[i].getcod();
                                 }
+                                archivo.close();
                                 system("pause");
                             break;
                             case 6: break;
