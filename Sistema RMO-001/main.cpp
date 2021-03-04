@@ -442,7 +442,7 @@ int main(){
                                     archivo<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
                                     for(int i = 0; i <= 91; i++){archivo<<"=";} archivo<<endl;
                                     for(int i = 0; i < nFacturas; i++){
-                                        archivo<<left<<setw(17)<<" | "<<listaFacturas[i].getCodigo()<<" | "<<setw(42)<<listaFacturas[i].mostraCliente()<<" | "<<setw(17)<<listaFacturas[i].getFecha()<<" | "<<setw(15)<<listaFacturas[i].getMonto()<<" | "<<endl;
+                                        archivo<<"| "<<left<<setw(15)<<listaFacturas[i].getCodigo()<<"| "<<setw(40)<<listaFacturas[i].mostraCliente()<<"| "<<setw(15)<<listaFacturas[i].getFecha()<<"| "<<setw(13)<<listaFacturas[i].getMonto()<<"|"<<endl;
                                     }
                                 }else{
                                     cout<<"No se pudo abrir el archivo."<<endl;
