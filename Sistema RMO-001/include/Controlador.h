@@ -2,6 +2,7 @@
 #define CONTROLADOR_H
 
 #include <iostream>
+#include <string.h>
 #include "Producto.h"
 #include "Proveedor.h"
 #include "Cliente.h"
@@ -15,9 +16,9 @@ class Factura;
 class Reporte;
 class Controlador{
     private:
-        char nombre[30];
-        char nomusuario[20];
-        char contrasenia[15];
+        string nombre;
+        string nomusuario;
+        string contrasenia;
         Producto* productos[100];
         Proveedor* proveedores[100];
         Cliente* clientes[100];
@@ -25,13 +26,13 @@ class Controlador{
         Reporte* reportes[100];
     public:
         Controlador();
-        bool verificarAcceso(char*,char*);
-        void asignarDatos();
-        void actualizarNombre(char*);
-        void actualizarNomUsuario(char*);
-        void actualizarContrasenia(char*);
-        void ordenar();
+        bool verificarAcceso(string,string);
+        void actualizarNombre(string);
+        void actualizarNomUsuario(string);
+        void actualizarContrasenia(string);
+        void ordenarProductos(Producto *,int);
         void buscar();
+        int cadenaNum(string);
 };
 
 #endif // CONTROLADOR_H

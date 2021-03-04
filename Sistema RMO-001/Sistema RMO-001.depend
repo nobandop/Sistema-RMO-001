@@ -71,7 +71,7 @@
 	<fstream>
 	<iomanip>
 
-1614477371 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\main.cpp
+1614834069 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\main.cpp
 	<iostream>
 	<string.h>
 	<iomanip>
@@ -81,19 +81,19 @@
 	"Factura.h"
 	"Producto.h"
 	"Proveedor.h"
-	"Reporte.h"
 
-1614828683 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\cliente.cpp
+1614830843 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\cliente.cpp
 	"Cliente.h"
 	<iostream>
 	<iomanip>
 	<string.h>
 
-1614828683 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\cliente.h
+1614830666 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\cliente.h
 	<iostream>
+	<string.h>
 	"Factura.h"
 
-1614829006 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\factura.h
+1614836203 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\factura.h
 	<iostream>
 	"Cliente.h"
 	"Producto.h"
@@ -105,13 +105,15 @@
 1614828795 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\proveedor.h
 	<iostream>
 
-1614828683 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\controlador.cpp
+1614834137 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\controlador.cpp
 	"Controlador.h"
+	<iostream>
 	<string.h>
 	<fstream>
 
-1614482451 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\controlador.h
+1614833851 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\controlador.h
 	<iostream>
+	<string.h>
 	"Producto.h"
 	"Proveedor.h"
 	"Cliente.h"
@@ -127,10 +129,11 @@
 	<iomanip>
 	"string.h"
 
-1614482162 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\producto.cpp
+1614833558 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\producto.cpp
 	"Producto.h"
 	<iostream>
 	<string.h>
+	<iomanip>
 	<fstream>
 
 1614828795 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\proveedor.cpp

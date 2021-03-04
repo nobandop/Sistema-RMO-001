@@ -1,21 +1,20 @@
 #include "Controlador.h"
+#include <iostream>
 #include <string.h>
 #include <fstream>
 
-Controlador::Controlador(){
-    strcpy(nomusuario,"admin");
-    strcpy(contrasenia,"admin");
+using namespace std;
 
+Controlador::Controlador(){
+	nombre = "admin";
+    nomusuario = "admin";
+    contrasenia = "admin";
 }
 
-bool Controlador::verificarAcceso(char *nom,char *contra){
+bool Controlador::verificarAcceso(string nom,string contra){
     int cont=0;
-    if(strcmp(nom,nomusuario)==0){
-        cont = cont + 1;
-    }
-    if(strcmp(contra,contrasenia)==0){
-        cont = cont + 1;
-    }
+    if(nom == nomusuario){cont = cont + 1;}
+    if(contra == contrasenia){cont = cont + 1;}
     if(cont==2){
         return true;
     }else{
@@ -23,18 +22,27 @@ bool Controlador::verificarAcceso(char *nom,char *contra){
     }
 }
 
-void Controlador::asignarDatos(){
-    ofstream archivo;
+void Controlador::actualizarNombre(string nom){nombre = nom;}
 
-    archivo.open("usuario.txt",ios::out);
+void Controlador::actualizarNomUsuario(string nomu){nomusuario = nomu;}
 
-    if(archivo.is_open()){
+void Controlador::actualizarContrasenia(string contra){contrasenia = contra;}
 
-    }
+int cadenaNum(string cadena){
+    string subcadena=cadena.substr(5,8);
+    int numero=stoi(subcadena);
+    return numero;
 }
 
-void Controlador::actualizarNombre(char* nom){strcpy(nombre,nom);}
-
-void Controlador::actualizarNomUsuario(char* nomu){strcpy(nomusuario,nomu);}
-
-void Controlador::actualizarContrasenia(char* contra){strcpy(contrasenia,contra);}
+void ordenarProductos(Producto *Productos, int n){
+    Producto aux;
+    for(int i = 1; i < n; i++){
+        for(int j = 0; j < n-i;j++){
+            if(cadenaNum(Productos[j].getCodigo()) > cadenaNum(Productos[j+1].getCodigo())){
+                aux = Productos[j];
+                Productos[j] = Productos[j+1];
+                Productos[j+1] = aux;
+            }
+        }
+    }
+}

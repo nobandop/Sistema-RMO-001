@@ -1,13 +1,13 @@
-#include <iostream>
+#include <iostream>         
 #include <string.h>
-#include <iomanip>
-#include <fstream>
-#include "Cliente.h"
+#include <iomanip>         
+#include <fstream>              
+#include "Cliente.h"            
 #include "Controlador.h"
 #include "Factura.h"
-#include "Producto.h"
-#include "Proveedor.h"
-
+#include "Producto.h"           
+#include "Proveedor.h"   
+                            
 using namespace std;
 
 void titulo();
@@ -21,13 +21,29 @@ int main(){
 	int nProductos=0,nClientes=0,nProveedores=0,nFacturas=0,nReportes=0,a;
 
 	bool salida = false;
-	int equivocacion=0,opc1,opc2,resp,f,c,ind,prod,warning = 0;
-	char nombre[30],nomu[20],contra[20],h;
+	int equivocacion=0,opc1,opc2,resp,f,c,ind,prod,warning = 0,cuantos;
+	string nombre,nomu,contra;
+    char h,aux;
 
+    fstream archivo;
+
+    /* archivo.open("usuario.txt");
+    if(archivo.is_open()){
+        getline(archivo,nombre);
+        archivo.get(aux);
+        getline(archivo,nomu);
+        archivo.get(aux);
+        getline(archivo,contra);
+        principal.asignarDatos(nombre,nomu,contra);
+        archivo.close();
+    }else{
+        cout<<"No se ha podido abrir el archivo"<<endl;
+    }
+ */
 	do{
         titulo();
-		cout<<"Ingrese su nombre de usuario: "; fflush(stdin); gets(nomu);
-		cout<<"Ingrese su contrasenia: "; fflush(stdin); gets(contra);
+		cout<<"Ingrese su nombre de usuario: "; cin>>nomu;
+		cout<<"Ingrese su contrasenia: "; cin>>contra;
 		if(principal.verificarAcceso(nomu,contra) == true){
             cout<<"Acceso concedido."<<endl;
             do{
@@ -47,7 +63,8 @@ int main(){
                         cout<<"2. Ver Lista de Productos"<<endl;
                         cout<<"3. Registrar Proveedor"<<endl;
                         cout<<"4. Ver Lista de Proveedores"<<endl;
-                        cout<<"5. Salir"<<endl;
+                        cout<<"5. Modo de ordenacion"<<endl;
+                        cout<<"6. Salir"<<endl;
                         cout<<"Elija una opcion: "; cin>>opc2;
                         switch(opc2){
                             case 1:
@@ -166,7 +183,25 @@ int main(){
                                 cout<<"\n";
                                 system("pause");
                             break;
-                            case 5: break;
+                            case 5:
+                                system("cls");
+                                cout<<"============================"<<endl;
+                                cout<<"|Opcion: Modo de ordenacion|"<<endl;
+                                cout<<"============================"<<endl<<"\n";
+                                cout<<"1. Ordenar por codigo"<<endl;
+                                cout<<"2. Ordenar por nombre"<<endl;
+                                cout<<"3. Ordenar por categoria"<<endl;
+                                cout<<"4. Salir"<<endl;
+                                cin>>resp;
+                                switch(resp){
+                                    case 1:
+                                        principal.ordenarProductos(listaProductos,nProductos);                                        
+                                    case 2:
+                                    case 3:
+                                    case 4: break;
+                                }
+                            break;
+                            case 6: break;
                             default: cout<<"\nNo ingreso una opcion correcta."<<endl; system("pause"); break;
                         }
                     break;
@@ -186,9 +221,9 @@ int main(){
                             case 1:
                                 if(nClientes > 0 and nProductos > 0){
                                     cout<<"Codigo 'factura(#)': ";
-                                    fflush(stdin); gets(listaFacturas[nFacturas].codigoFactura);
+                                    cin>>listaFacturas[nFacturas].codigoFactura;
                                     cout<<"Fecha de factura (DD/MM/AA): ";
-                                    fflush(stdin); gets(listaFacturas[nFacturas].fechaFactura);
+                                    cin>>listaFacturas[nFacturas].fechaFactura;
                                     cout<<endl<<"Ahora debera elegir a que cliente agregar: "<<endl;
                                     cout<<left;
                                     cout<<setw(3)<<"#";
@@ -289,6 +324,17 @@ int main(){
                                 }
                             break;
                             case 2:
+                            system("cls");
+                                cout<<"============================"<<endl;
+                                cout<<"|Opcion: Ver lista Facturas|"<<endl;
+                                cout<<"============================"<<endl<<"\n";
+                                cout<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
+                                for(int i = 0; i <= 85; i++){cout<<"=";} cout<<endl;
+                                for(int i = 0; i < nFacturas; i++){
+                                    listaFacturas[i].mostrarFactura();
+                                    listaFacturas[i].productosComprados();
+                                }
+                                system("pause");
                             break;
                             case 3:
                                 listaClientes[nClientes].leerCliente();
@@ -332,6 +378,13 @@ int main(){
                                 for(int i = 0; i < nFacturas; i++){
                                     listaFacturas[i].mostrarFactura();
                                 }
+                                ofstream archivo;
+                                archivo.open("reporte.txt");
+                                archivo<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
+                                for(int i = 0; i <= 85; i++){archivo<<"=";} archivo<<endl;
+                                for(int i = 0; i < nFacturas; i++){
+                                    archivo<<listaFacturas[i].getcod();
+                                }
                                 system("pause");
                             break;
                             case 6: break;
@@ -340,8 +393,8 @@ int main(){
                     break;
                     case 3:                                     //DATOS DEL USUARIO
                         cout<<"Ingrese sus datos:";
-                        cout<<"Usuario: "; fflush(stdin); gets(nomu);
-		                cout<<"Contrasenia: "; fflush(stdin); gets(contra);
+                        cout<<"Usuario: "; cin>>nomu;
+		                cout<<"Contrasenia: "; cin>>contra;
                         if(principal.verificarAcceso(nomu,contra) == true){
                             system("cls");
                             cout<<"Opcion: Datos de usuario."<<endl;
@@ -353,15 +406,15 @@ int main(){
                             cout<<"Elija una opcion: "; cin>>opc2;
                             switch(opc2){
                                 case 1:
-                                    cout<<"Ingrese el nuevo Nombre y Apellido:";cin.sync();gets(nombre);
+                                    cout<<"Ingrese el nuevo Nombre y Apellido:"; cin>>nombre;
                                     principal.actualizarNombre(nombre);
                                 break;
                                 case 2:
-                                    cout<<"Ingrese el nuevo Usuario: ";cin.sync();gets(nomu);
+                                    cout<<"Ingrese el nuevo Usuario: "; cin>>nomu;
                                     principal.actualizarNomUsuario(nomu);
                                 break;
                                 case 3:
-                                    cout<<"Ingrese la nueva Contraseña: ";cin.sync();gets(contra);
+                                    cout<<"Ingrese la nueva Contraseña: "; cin>>contra;
                                     principal.actualizarContrasenia(contra);
                                 break;
                                 case 4: break;

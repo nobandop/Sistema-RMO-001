@@ -2,16 +2,17 @@
 #define CLIENTE_H
 
 #include <iostream>
+#include <string.h>
 #include "Factura.h"
 using namespace std;
 
 class Factura;
 class Cliente{
     private:
-        char codigoCliente[12];
-        char nombreCliente[40];
-        char dniCliente[12];
-        char telefonoCliente[12];
+        string codigoCliente;
+        string nombreCliente;
+        string dniCliente;
+        string telefonoCliente;
         Factura *facturas[50];
         int nFacturas;
     public:
@@ -20,7 +21,7 @@ class Cliente{
         void leerCliente();
         void modificarCliente(int);
         void mostrarCliente();
-        char* getNomCliente();
+        string getNomCliente();
 };
 
 #endif // CLIENTE_H

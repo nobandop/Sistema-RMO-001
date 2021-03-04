@@ -6,10 +6,10 @@
 using namespace std;
 
 Cliente::Cliente(){
-    strcpy(codigoCliente,"-");
-    strcpy(nombreCliente,"-");
-    strcpy(dniCliente,"00000000");
-    strcpy(telefonoCliente,"000000000");
+    codigoCliente="-";
+    nombreCliente="-";
+    dniCliente="00000000";
+    telefonoCliente="000000000";
     nFacturas = 0;
 }
 
@@ -19,19 +19,19 @@ void Cliente::asignarFactura(Factura* fact){
 }
 
 void Cliente::leerCliente(){
-	cout<<"Codigo (Ejm.: cli-001): "; fflush(stdin); gets(codigoCliente);
-	cout<<"Nombre completo: "; gets(nombreCliente);
-	cout<<"DNI: "; gets(dniCliente);
-	cout<<"Telefono: "; gets(telefonoCliente);
+	cout<<"Codigo (Ejm.: cli-001): "; cin>>codigoCliente;
+	cout<<"Nombre completo: "; cin>>nombreCliente;
+	cout<<"DNI: "; cin>>dniCliente;
+	cout<<"Telefono: "; cin>>telefonoCliente;
 }
 
 void Cliente::modificarCliente(int n){
     switch(n){
-		case 1: cout<<"Codigo (Ejm: cli-001): "; fflush(stdin); gets(codigoCliente); cout<<"Modificacion exitosa."<<endl; break;
-		case 2: cout<<"Nombre completo: "; fflush(stdin); gets(nombreCliente); cout<<"Modificacion exitosa."<<endl; break;
-		case 3: cout<<"DNI: "; fflush(stdin); gets(dniCliente); cout<<"Modificacion exitosa."<<endl; break;
-		case 4: cout<<"Telefono: "; fflush(stdin); gets(telefonoCliente); cout<<"Modificacion exitosa."<<endl; break;
-		default: cout<<"Opción incorrecta."; break;
+		case 1: cout<<"Codigo (Ejm: cli-001): "; cin>>codigoCliente; cout<<"Modificacion exitosa."<<endl; break;
+		case 2: cout<<"Nombre completo: "; cin>>nombreCliente; cout<<"Modificacion exitosa."<<endl; break;
+		case 3: cout<<"DNI: "; cin>>dniCliente; cout<<"Modificacion exitosa."<<endl; break;
+		case 4: cout<<"Telefono: "; cin>>telefonoCliente; cout<<"Modificacion exitosa."<<endl; break;
+		default: cout<<"Opciï¿½n incorrecta."; break;
 	}
 }
 
@@ -44,6 +44,6 @@ void Cliente::mostrarCliente(){
 	cout<<endl;
 }
 
-char* Cliente::getNomCliente(){
+string Cliente::getNomCliente(){
     return nombreCliente;
 }
