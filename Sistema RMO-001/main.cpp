@@ -160,8 +160,8 @@ int main(){
                                     cout<<"==================================="<<endl;
                                     cout<<"|Opcion: Ver Lista de  Proveedores|"<<endl;
                                     cout<<"==================================="<<endl<<"\n";
-                                    cout<<left<<setw(17)<<"| Codigo (1)"<<setw(22)<<"| Nombre (2) "<<setw(17)<<"| RUC (3) "<<setw(17)<<"| Telefono (4) "<<setw(42)<<"| Direccion (5) "<<"|"<<endl;
-                                    for(int i = 0; i <= 115; i++){cout<<"=";} cout<<endl;
+                                    cout<<left<<setw(17)<<"| Codigo (1)"<<setw(42)<<"| Nombre (2) "<<setw(17)<<"| RUC (3) "<<setw(17)<<"| Telefono (4) "<<setw(42)<<"| Direccion (5) "<<"|"<<endl;
+                                    for(int i = 0; i <= 135; i++){cout<<"=";} cout<<endl;
                                     for(int i = 0; i < nProveedores; i++){listaProveedores[i].mostrarProveedor();}
                                     cout<<endl<<"Desea modificar algun producto? [S/N]: "; cin>>h;
                                     if(h=='S'||h=='s'){
