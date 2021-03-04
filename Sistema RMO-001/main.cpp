@@ -374,13 +374,13 @@ int main(){
                                 for(int i = 0; i <= 85; i++){cout<<"=";} cout<<endl;
                                 for(int i = 0; i < nFacturas; i++){listaFacturas[i].mostrarFactura();}
                                 
-                                archivo.open("reporte.txt");
+                                /*archivo.open("reporte.txt");
                                 archivo<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
                                 for(int i = 0; i <= 85; i++){archivo<<"=";} archivo<<endl;
                                 for(int i = 0; i < nFacturas; i++){
                                     archivo<<left<<setw(17)<<listaFacturas[i].getCodigo()<<setw(42)<<listaFacturas[i].getNombreCli()<<setw(17)<<listaFacturas[i].getFecha()<<setw(15)<<listaFacturas[i].getMonto()<<endl;
                                 }                                           
-                                archivo.close();
+                                archivo.close();*/
                                 system("pause");
                             break;
                             case 6: break;

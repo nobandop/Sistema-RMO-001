@@ -31,7 +31,7 @@ void Cliente::modificarCliente(int n){
 		case 2: cout<<"Nombre completo: "; cin>>nombreCliente; cout<<"Modificacion exitosa."<<endl; break;
 		case 3: cout<<"DNI: "; cin>>dniCliente; cout<<"Modificacion exitosa."<<endl; break;
 		case 4: cout<<"Telefono: "; cin>>telefonoCliente; cout<<"Modificacion exitosa."<<endl; break;
-		default: cout<<"Opci�n incorrecta."; break;
+		default: cout<<"Opcion incorrecta."; break;
 	}
 }
 
@@ -44,6 +44,4 @@ void Cliente::mostrarCliente(){
 	cout<<endl;
 }
 
-string Cliente::getNomCliente(){
-    return nombreCliente;
-}
+string Cliente::getNomCliente(){return nombreCliente;}
