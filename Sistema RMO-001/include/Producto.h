@@ -7,8 +7,8 @@ using namespace std;
 
 class Producto{
     private:
-        char codigoProducto[12];
-        char nombreProducto[30];
+        string codigoProducto;
+        string nombreProducto;
         char categoriaProducto[20];
         int cantidadProducto;
         float precioProducto;
@@ -24,8 +24,8 @@ class Producto{
         void actualizarCantProductos(int);
         void agregarSubTotal(int);
         void agregarCantSolicitada(int);
-        char* getCodigo();
-        char* getNombre();
+        string getCodigo();
+        string getNombre();
         int getCantProducto();
         int getCantsolicitada();
         float getPrecio();

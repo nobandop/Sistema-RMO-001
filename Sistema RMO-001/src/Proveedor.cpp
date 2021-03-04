@@ -7,17 +7,17 @@
 using namespace std;
 
 Proveedor::Proveedor(){
-    strcpy(codigoProveedor,"-");
-    strcpy(nombreProveedor,"-");
+    codigoProveedor="-";
+    nombreProveedor="-";
     strcpy(rucProveedor,"-");
     strcpy(telefonoProveedor,"-");
     strcpy(direccionProveedor,"-");
 }
 
 void Proveedor::leerProveedor(){
-    cout<<"Codigo (Ejm.: PROV-001): ";fflush(stdin); gets(codigoProveedor);
-	cout<<"Nombre: "; gets(nombreProveedor);
-	cout<<"RUC: "; gets(rucProveedor);
+    cout<<"Codigo (Ejm.: PROV-001): "; cin>>codigoProveedor;
+	cout<<"Nombre: "; cin>>nombreProveedor;
+	cout<<"RUC: "; fflush(stdin);gets(rucProveedor);
 	cout<<"Telefono: "; gets(telefonoProveedor);
 	cout<<"Direccion: "; gets(direccionProveedor);
 }
@@ -34,8 +34,8 @@ void Proveedor::mostrarProveedor(){
 
 void Proveedor::modificarProveedor(int n){
     switch(n){
-		case 1: cout<<"Codigo (Ejm: PROV-001): "; fflush(stdin); gets(codigoProveedor); cout<<"Modificacion exitosa."<<endl; break;
-		case 2: cout<<"Nombre: "; fflush(stdin); gets(nombreProveedor); cout<<"Modificacion exitosa."<<endl; break;
+		case 1: cout<<"Codigo (Ejm: PROV-001): "; cin>>codigoProveedor; cout<<"Modificacion exitosa."<<endl; break;
+		case 2: cout<<"Nombre: "; cin>>nombreProveedor; cout<<"Modificacion exitosa."<<endl; break;
 		case 3: cout<<"RUC: "; fflush(stdin); gets(rucProveedor); cout<<"Modificacion exitosa."<<endl; break;
 		case 4: cout<<"Telefono: "; fflush(stdin); gets(telefonoProveedor); cout<<"Modificacion exitosa."<<endl; break;
 		case 5: cout<<"Direccion: "; fflush(stdin); gets(direccionProveedor); cout<<"Modificacion exitosa."<<endl; break;
@@ -43,4 +43,4 @@ void Proveedor::modificarProveedor(int n){
 	}
 }
 
-char* Proveedor::getNomProveedor(){return nombreProveedor;}
+string Proveedor::getNomProveedor(){return nombreProveedor;}

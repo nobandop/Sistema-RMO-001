@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1614558386 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\main.cpp
+1614645272 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\main.cpp
 	<iostream>
 	<string.h>
 	<iomanip>
@@ -25,11 +25,11 @@
 	"Cliente.h"
 	"Producto.h"
 
-1614492951 c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\include\producto.h
+1614828382 c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\include\producto.h
 	<iostream>
 	"Proveedor.h"
 
-1614487734 c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\include\proveedor.h
+1614828602 c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\include\proveedor.h
 	<iostream>
 
 1614482804 c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\include\controlador.h
@@ -49,7 +49,7 @@
 	<string.h>
 	<fstream>
 
-1614492951 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\src\producto.cpp
+1614828382 source:c:\users\kenedy\documents\github\sistema-rmo-001\sistema rmo-001\src\producto.cpp
 	"Producto.h"
 	<iostream>
 	<string.h>

@@ -6,8 +6,8 @@ using namespace std;
 
 class Proveedor{
     private:
-        char codigoProveedor[12];
-        char nombreProveedor[30];
+        string codigoProveedor;
+        string nombreProveedor;
         char rucProveedor[20];
         char telefonoProveedor[12];
         char direccionProveedor[40];
@@ -16,7 +16,7 @@ class Proveedor{
         void leerProveedor();
         void mostrarProveedor();
         void modificarProveedor(int);
-        char* getNomProveedor();
+        string getNomProveedor();
 };
 
 #endif // PROVEEDOR_H
