@@ -3,14 +3,14 @@
 #include "string.h"
 
 Factura::Factura(){
-    strcpy(codigoFactura,"-");
-    strcpy(fechaFactura,"-");
+    codigoFactura = "-";
+    fechaFactura = "-";
     nProductos = 0;
 }
 
 void Factura::leerFactura(){
-    cout<<"Codigo: ";fflush(stdin);gets(codigoFactura);
-    cout<<"Fecha: ";gets(fechaFactura);
+    cout<<"Codigo: "; fflush(stdin); cin>>codigoFactura;
+    cout<<"Fecha: "; cin>>fechaFactura;
 }
 
 void Factura::desarrolloFactura(Producto* p,int c){

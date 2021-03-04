@@ -7,9 +7,9 @@
 using namespace std;
 
 Producto::Producto(){
-    codigoProducto="-";
-    nombreProducto="-";
-    strcpy(categoriaProducto,"-");
+    codigoProducto = "-";
+    nombreProducto = "-";
+    categoriaProducto = "-";
     cantidadProducto = 0;
     precioProducto = 0;
 }
@@ -17,7 +17,7 @@ Producto::Producto(){
 void Producto::leerProducto(){
     cout<<"Codigo (Ejm.: PROD-001): "; cin>>codigoProducto;
 	cout<<"Nombre: "; cin>>nombreProducto;
-	cout<<"Categoria: "; fflush(stdin); gets(categoriaProducto);
+	cout<<"Categoria: "; fflush(stdin); cin>>categoriaProducto;
 	cout<<"Cantidad: "; cin.sync(); cin>>cantidadProducto;
 	cout<<"Precio Unitario: "; cin.sync(); cin>>precioProducto;
 }
@@ -38,7 +38,7 @@ void Producto::modificarProducto(int n){
 		case 1: cout<<"Codigo (Ejm.: PROD-001): "; cin>>codigoProducto; cout<<"Modificacion exitosa."<<endl; break;
 		case 2: cout<<"Nombre: "; cin>>nombreProducto; cout<<"Modificacion exitosa."<<endl; break;
 		case 3: cout<<"Cantidad: "; cin>>cantidadProducto; cout<<"Modificacion exitosa."<<endl; break;
-		case 4: cout<<"Categoria: "; fflush(stdin); gets(categoriaProducto); cout<<"Modificacion exitosa."<<endl; break;
+		case 4: cout<<"Categoria: "; cin>>categoriaProducto); cout<<"Modificacion exitosa."<<endl; break;
 		case 5: cout<<"Precio Unitario: "; cin>>precioProducto; cout<<"Modificacion exitosa."<<endl; break;
 		case 6: cout<<"Proveedor: "; break;
 		default: cout<<"Opción incorrecta."; break;

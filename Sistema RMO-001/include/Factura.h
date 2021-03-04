@@ -9,8 +9,8 @@ using namespace std;
 class Cliente;
 class Factura{
     public:
-        char codigoFactura[10];
-        char fechaFactura[10];
+        string codigoFactura;
+        string fechaFactura;
         Cliente* cliente;
         Producto* producto[20];
         int nProductos = 0;

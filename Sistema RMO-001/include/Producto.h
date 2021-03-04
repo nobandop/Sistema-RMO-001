@@ -9,7 +9,7 @@ class Producto{
     private:
         string codigoProducto;
         string nombreProducto;
-        char categoriaProducto[20];
+        string categoriaProducto;
         int cantidadProducto;
         float precioProducto;
         int cantidadSolicitada = 0;
