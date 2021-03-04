@@ -71,7 +71,7 @@
 	<fstream>
 	<iomanip>
 
-1614834069 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\main.cpp
+1614836702 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\main.cpp
 	<iostream>
 	<string.h>
 	<iomanip>
@@ -93,7 +93,7 @@
 	<string.h>
 	"Factura.h"
 
-1614836203 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\factura.h
+1614837986 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\factura.h
 	<iostream>
 	"Cliente.h"
 	"Producto.h"
@@ -105,13 +105,13 @@
 1614828795 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\proveedor.h
 	<iostream>
 
-1614834137 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\controlador.cpp
+1614836121 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\controlador.cpp
 	"Controlador.h"
 	<iostream>
 	<string.h>
 	<fstream>
 
-1614833851 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\controlador.h
+1614836107 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\controlador.h
 	<iostream>
 	<string.h>
 	"Producto.h"

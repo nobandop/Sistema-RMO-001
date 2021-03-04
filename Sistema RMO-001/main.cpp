@@ -25,7 +25,7 @@ int main(){
 	string nombre,nomu,contra;
     char h,aux;
 
-    fstream archivo;
+    ofstream archivo;
 
     /* archivo.open("usuario.txt");
     if(archivo.is_open()){
@@ -113,6 +113,7 @@ int main(){
                                         }
                                     }
 						        }
+                                principal.asignarProducto(&listaProductos[nProductos]);
                                 nProductos++;
                                 system("pause");
                             break;
@@ -195,7 +196,7 @@ int main(){
                                 cin>>resp;
                                 switch(resp){
                                     case 1:
-                                        principal.ordenarProductos(listaProductos,nProductos);                                        
+                                        principal.ordenarProductos();
                                     case 2:
                                     case 3: 
                                     case 4: break;
@@ -372,13 +373,13 @@ int main(){
                                 cout<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
                                 for(int i = 0; i <= 85; i++){cout<<"=";} cout<<endl;
                                 for(int i = 0; i < nFacturas; i++){listaFacturas[i].mostrarFactura();}
-                                //ofstream archivo;
+                                
                                 archivo.open("reporte.txt");
                                 archivo<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
                                 for(int i = 0; i <= 85; i++){archivo<<"=";} archivo<<endl;
                                 for(int i = 0; i < nFacturas; i++){
-                                    archivo<<listaFacturas[i].getcod();
-                                }
+                                    archivo<<left<<setw(17)<<listaFacturas[i].getCodigo()<<setw(42)<<listaFacturas[i].getNombreCli()<<setw(17)<<listaFacturas[i].getFecha()<<setw(15)<<listaFacturas[i].getMonto()<<endl;
+                                }                                           
                                 archivo.close();
                                 system("pause");
                             break;

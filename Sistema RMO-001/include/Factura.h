@@ -22,7 +22,10 @@ class Factura{
         void asignarCliente(Cliente*);
         void productosComprados();
         void mostrarFactura();
-        string getcod(){return codigoFactura;}
+        string getCodigo(){return codigoFactura;}
+        string getNombreCli(){return cliente;}
+        string getFecha(){return fechaFactura;}
+        float getMonto(){return totalPagar;}
 };
 
 #endif // FACTURA_H

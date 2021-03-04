@@ -28,20 +28,25 @@ void Controlador::actualizarNomUsuario(string nomu){nomusuario = nomu;}
 
 void Controlador::actualizarContrasenia(string contra){contrasenia = contra;}
 
+void Controlador::asignarProducto(Producto *p){
+    productos[nProductos] = p;
+    nProductos = nProducto + 1;
+}
+
 int cadenaNum(string cadena){
     string subcadena=cadena.substr(5,8);
     int numero=stoi(subcadena);
     return numero;
 }
 
-void ordenarProductos(Producto *Productos, int n){
+void ordenarProductos(){
     Producto aux;
     for(int i = 1; i < n; i++){
         for(int j = 0; j < n-i;j++){
-            if(cadenaNum(Productos[j].getCodigo()) > cadenaNum(Productos[j+1].getCodigo())){
-                aux = Productos[j];
-                Productos[j] = Productos[j+1];
-                Productos[j+1] = aux;
+            if(cadenaNum(productos[j].codigoProducto) > cadenaNum(productos[j+1].codigoProducto)){
+                aux = productos[j];
+                productos[j] = productos[j+1];
+                productos[j+1] = aux;
             }
         }
     }

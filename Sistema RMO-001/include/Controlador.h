@@ -20,6 +20,7 @@ class Controlador{
         string nomusuario;
         string contrasenia;
         Producto* productos[100];
+        int nProductos;
         Proveedor* proveedores[100];
         Cliente* clientes[100];
         Factura* facturas[100];
@@ -30,7 +31,8 @@ class Controlador{
         void actualizarNombre(string);
         void actualizarNomUsuario(string);
         void actualizarContrasenia(string);
-        void ordenarProductos(Producto *,int);
+        void asignarProductos(Producto *);
+        void ordenarProductos();
         void buscar();
         int cadenaNum(string);
 };
