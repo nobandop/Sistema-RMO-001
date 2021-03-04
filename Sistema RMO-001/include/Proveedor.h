@@ -16,7 +16,8 @@ class Proveedor{
         void leerProveedor();
         void mostrarProveedor();
         void modificarProveedor(int);
-        string getNomProveedor();
+        string getCodigo();
+        string getNombre();
 };
 
 #endif // PROVEEDOR_H

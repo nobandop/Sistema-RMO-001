@@ -43,4 +43,5 @@ void Proveedor::modificarProveedor(int n){
 	}
 }
 
-string Proveedor::getNomProveedor(){return nombreProveedor;}
+string Proveedor::getCodigo(){return codigoProveedor;}
+string Proveedor::getNombre(){return nombreProveedor;}

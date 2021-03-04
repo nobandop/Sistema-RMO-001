@@ -44,4 +44,6 @@ void Cliente::mostrarCliente(){
 	cout<<endl;
 }
 
-string Cliente::getNomCliente(){return nombreCliente;}
+string Cliente::getCodigo(){return codigoCliente;}
+string Cliente::getNombre(){return nombreCliente;}
+

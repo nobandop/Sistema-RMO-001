@@ -24,7 +24,7 @@ void Factura::desarrolloFactura(Producto* p,int c){
 
 void Factura::asignarCliente(Cliente* c){cliente = c;}
 
-void Factura::mostrarFactura(){cout<<"| "<<left<<setw(15)<<codigoFactura<<"| "<<setw(40)<<cliente->getNomCliente()<<"| "<<setw(15)<<fechaFactura<<"| "<<setw(13)<<totalPagar<<"|"<<endl;}
+void Factura::mostrarFactura(){cout<<"| "<<left<<setw(15)<<codigoFactura<<"| "<<setw(40)<<cliente->getNombre()<<"| "<<setw(15)<<fechaFactura<<"| "<<setw(13)<<totalPagar<<"|"<<endl;}
 
 void Factura::productosComprados(){
     cout<<"Productos comprados: "<<endl;

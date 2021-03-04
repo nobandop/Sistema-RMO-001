@@ -1,22 +1,23 @@
-#include <iostream>         
+#include <iostream>
 #include <string.h>
-#include <iomanip>         
-#include <fstream>              
-#include "Cliente.h"            
+#include <iomanip>
+#include <fstream>
+#include "Cliente.h"
 #include "Controlador.h"
 #include "Factura.h"
-#include "Producto.h"           
-#include "Proveedor.h"   
-                            
+#include "Producto.h"
+#include "Proveedor.h"
+
 using namespace std;
 
 void titulo();
+int cadenaNum(string);
 
 int main(){
     Controlador principal;
-    Producto listaProductos[50];
-    Cliente listaClientes[50];
-    Proveedor listaProveedores[50];
+    Producto listaProductos[50],auxProducto;
+    Cliente listaClientes[50],auxCliente;
+    Proveedor listaProveedores[50],auxProveedor;
 	Factura listaFacturas[50];
 	int nProductos=0,nClientes=0,nProveedores=0,nFacturas=0,nReportes=0,a;
 
@@ -113,48 +114,49 @@ int main(){
                                         }
                                     }
 						        }
-                                principal.asignarProducto(&listaProductos[nProductos]);
                                 nProductos++;
                                 system("pause");
                             break;
                             case 2:                     //VER LISTA Y MODIFICAR PRODUCTOS
-                                system("cls");
-                                cout<<"================================="<<endl;
-                                cout<<"|Opcion: Ver Lista de  Productos|"<<endl;
-                                cout<<"================================="<<endl<<"\n";
-                                cout<<left<<setw(17)<<"| Codigo (1)"<<setw(27)<<"| Nombre (2)"<<setw(17)<<"| Cantidad (3)"<<setw(22)<<"| Categoria (4)"<<setw(17)<<"| Precio (5)"<<setw(22)<<"| Proveedor (6)"<<"|"<<endl;
-								for(int i = 0; i <= 122; i++){cout<<"=";}
-								cout<<endl;
-								for(int i = 0; i < nProductos; i++){listaProductos[i].mostrarProducto();}
-                                cout<<endl<<"Desea modificar algun producto? [S/N]: "; cin>>h;
-                                if(h=='S'||h=='s'){
-                                    cout<<"Fila: "; cin>>f;
-									if(f <= nProductos){
-										cout<<"Columna: "; cin>>c;
-                                        listaProductos[f-1].modificarProducto(c);
-                                        if(c==6){
-                                            cout<<left<<setw(3)<<"\n#"<<setw(17)<<"| Codigo"<<setw(22)<<"| Nombre"<<setw(17)<<"| RUC"<<setw(17)<<"| Telefono"<<setw(42)<<"| Direccion"<<"|"<<endl;
-                                            for(int i = 0; i <= 118; i++){cout<<"=";} cout<<endl;
-                                            for(int i = 0; i < nProveedores; i++){
-                                                cout<<left<<setw(3)<<i+1;
-                                                listaProveedores[i].mostrarProveedor();
+                                do{
+                                    system("cls");
+                                    cout<<"================================="<<endl;
+                                    cout<<"|Opcion: Ver Lista de  Productos|"<<endl;
+                                    cout<<"================================="<<endl<<"\n";
+                                    cout<<left<<setw(17)<<"| Codigo (1)"<<setw(27)<<"| Nombre (2)"<<setw(17)<<"| Cantidad (3)"<<setw(22)<<"| Categoria (4)"<<setw(17)<<"| Precio (5)"<<setw(22)<<"| Proveedor (6)"<<"|"<<endl;
+                                    for(int i = 0; i <= 122; i++){cout<<"=";}
+                                    cout<<endl;
+                                    for(int i = 0; i < nProductos; i++){listaProductos[i].mostrarProducto();}
+                                    cout<<endl<<"Desea modificar algun producto? [S/N]: "; cin>>h;
+                                    if(h=='S'||h=='s'){
+                                        cout<<"Fila: "; cin>>f;
+                                        if(f <= nProductos){
+                                            cout<<"Columna: "; cin>>c;
+                                            listaProductos[f-1].modificarProducto(c);
+                                            if(c==6){
+                                                cout<<left<<setw(3)<<"\n#"<<setw(17)<<"| Codigo"<<setw(22)<<"| Nombre"<<setw(17)<<"| RUC"<<setw(17)<<"| Telefono"<<setw(42)<<"| Direccion"<<"|"<<endl;
+                                                for(int i = 0; i <= 118; i++){cout<<"=";} cout<<endl;
+                                                for(int i = 0; i < nProveedores; i++){
+                                                    cout<<left<<setw(3)<<i+1;
+                                                    listaProveedores[i].mostrarProveedor();
+                                                }
+                                                cout<<"\nDesea asignar al producto alguno de los proveedores que se muestran? [S/N]: "; cin>>h;
+                                                if(h=='S'||h=='s'){
+                                                    cout<<"\nDigite el numero del proveedor que desea asignar al producto: "; cin>>a;
+                                                    listaProductos[nProductos].asignarProveedor(&listaProveedores[a-1]);
+                                                    cout<<"Modificacion exitosa."<<endl;
+                                                }else{
+                                                    cout<<"\nIngrese los datos del proveedor: "<<endl;
+                                                    listaProveedores[nProveedores].leerProveedor();
+                                                    listaProductos[nProductos].asignarProveedor(&listaProveedores[nProveedores]);
+                                                    nProveedores++;
+                                                }
                                             }
-                                            cout<<"\nDesea asignar al producto alguno de los proveedores que se muestran? [S/N]: "; cin>>h;
-                                            if(h=='S'||h=='s'){
-                                                cout<<"\nDigite el numero del proveedor que desea asignar al producto: "; cin>>a;
-                                                listaProductos[nProductos].asignarProveedor(&listaProveedores[a-1]);
-                                                cout<<"Modificacion exitosa."<<endl;
-                                            }else{
-                                                cout<<"\nIngrese los datos del proveedor: "<<endl;
-                                                listaProveedores[nProveedores].leerProveedor();
-                                                listaProductos[nProductos].asignarProveedor(&listaProveedores[nProveedores]);
-                                                nProveedores++;
-                                            }
-                                        }
-                                    }else{cout<<"\nIngrese una fila correcta, hay "<<nProductos<<" filas."<<endl;}
-                                }
-                                cout<<"\n";
-                                system("pause");
+                                        }else{cout<<"\nIngrese una fila correcta, hay "<<nProductos<<" filas."<<endl;}
+                                    }
+                                    cout<<"\n";
+                                    system("pause");
+                                }while(h=='S'||h=='s');
                             break;
                             case 3:             //REGISTRAR PROVEEDORES
                                 system("cls");
@@ -166,23 +168,25 @@ int main(){
                                 system("pause");
                             break;
                             case 4:             //VER LISTA Y MODIFICAR PROVEEDORES
-                                system("cls");
-                                cout<<"==================================="<<endl;
-                                cout<<"|Opcion: Ver Lista de  Proveedores|"<<endl;
-                                cout<<"==================================="<<endl<<"\n";
-                                cout<<left<<setw(17)<<"| Codigo (1)"<<setw(22)<<"| Nombre (2) "<<setw(17)<<"| RUC (3) "<<setw(17)<<"| Telefono (4) "<<setw(42)<<"| Direccion (5) "<<"|"<<endl;
-								for(int i = 0; i <= 115; i++){cout<<"=";} cout<<endl;
-								for(int i = 0; i < nProveedores; i++){listaProveedores[i].mostrarProveedor();}
-                                cout<<endl<<"Desea modificar algun producto? [S/N]: "; cin>>h;
-                                if(h=='S'||h=='s'){
-                                    cout<<"Fila: "; cin>>f;
-									if(f <= nProveedores){
-										cout<<"Columna: "; cin>>c;
-                                        listaProveedores[f-1].modificarProveedor(c);
-                                    }else{cout<<"\nIngrese una fila correcta, hay "<<nProveedores<<" filas."<<endl;}
-                                }
-                                cout<<"\n";
-                                system("pause");
+                                do{
+                                    system("cls");
+                                    cout<<"==================================="<<endl;
+                                    cout<<"|Opcion: Ver Lista de  Proveedores|"<<endl;
+                                    cout<<"==================================="<<endl<<"\n";
+                                    cout<<left<<setw(17)<<"| Codigo (1)"<<setw(22)<<"| Nombre (2) "<<setw(17)<<"| RUC (3) "<<setw(17)<<"| Telefono (4) "<<setw(42)<<"| Direccion (5) "<<"|"<<endl;
+                                    for(int i = 0; i <= 115; i++){cout<<"=";} cout<<endl;
+                                    for(int i = 0; i < nProveedores; i++){listaProveedores[i].mostrarProveedor();}
+                                    cout<<endl<<"Desea modificar algun producto? [S/N]: "; cin>>h;
+                                    if(h=='S'||h=='s'){
+                                        cout<<"Fila: "; cin>>f;
+                                        if(f <= nProveedores){
+                                            cout<<"Columna: "; cin>>c;
+                                            listaProveedores[f-1].modificarProveedor(c);
+                                        }else{cout<<"\nIngrese una fila correcta, hay "<<nProveedores<<" filas."<<endl;}
+                                    }
+                                    cout<<"\n";
+                                    system("pause");
+                                }while(h=='S'||h=='s');
                             break;
                             case 5:
                                 system("cls");
@@ -191,15 +195,44 @@ int main(){
                                 cout<<"============================"<<endl<<"\n";
                                 cout<<"1. Ordenar por codigo"<<endl;
                                 cout<<"2. Ordenar por nombre"<<endl;
-                                cout<<"3. Ordenar por categoria"<<endl;
-                                cout<<"4. Salir"<<endl;
+                                cout<<"3. Salir"<<endl;
                                 cin>>resp;
                                 switch(resp){
-                                    case 1:
-                                        principal.ordenarProductos();
-                                    case 2:
-                                    case 3: 
-                                    case 4: break;
+                                    case 1:                 //Ordenacion por codigo
+                                        for(int i = 1; i < nProductos; i++){
+                                            for(int j = 0; j < nProductos-i;j++){
+                                                if(cadenaNum(listaProductos[j].getCodigo()) > cadenaNum(listaProductos[j+1].getCodigo())){
+                                                    auxProducto = listaProductos[j];
+                                                    listaProductos[j] = listaProductos[j+1];
+                                                    listaProductos[j+1] = auxProducto;
+                                                }
+                                            }
+                                        }
+                                        cout<<"Productos ordenados por codigo..."<<endl;
+                                        for(int i = 1; i < nProveedores; i++){
+                                            for(int j = 0; j < nProveedores-i;j++){
+                                                if(cadenaNum(listaProveedores[j].getCodigo()) > cadenaNum(listaProveedores[j+1].getCodigo())){
+                                                    auxProveedor = listaProveedores[j];
+                                                    listaProveedores[j] = listaProveedores[j+1];
+                                                    listaProveedores[j+1] = auxProveedor;
+                                                }
+                                            }
+                                        }
+                                        cout<<"Proveedores ordenados por codigo..."<<endl;
+                                        for(int i = 1; i < nClientes; i++){
+                                            for(int j = 0; j < nClientes-i;j++){
+                                                if(cadenaNum(listaClientes[j].getCodigo()) > cadenaNum(listaClientes[j+1].getCodigo())){
+                                                    auxCliente = listaClientes[j];
+                                                    listaClientes[j] = listaClientes[j+1];
+                                                    listaClientes[j+1] = auxCliente;
+                                                }
+                                            }
+                                        }
+                                        cout<<"Clientes ordenados por codigo..."<<endl;
+                                        cout<<endl;system("pause");
+                                    case 2:                 //Ordenacion por nombre
+
+                                    case 3: break;
                                 }
                             break;
                             case 6: break;
@@ -373,13 +406,13 @@ int main(){
                                 cout<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
                                 for(int i = 0; i <= 85; i++){cout<<"=";} cout<<endl;
                                 for(int i = 0; i < nFacturas; i++){listaFacturas[i].mostrarFactura();}
-                                
+
                                 /*archivo.open("reporte.txt");
                                 archivo<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
                                 for(int i = 0; i <= 85; i++){archivo<<"=";} archivo<<endl;
                                 for(int i = 0; i < nFacturas; i++){
                                     archivo<<left<<setw(17)<<listaFacturas[i].getCodigo()<<setw(42)<<listaFacturas[i].getNombreCli()<<setw(17)<<listaFacturas[i].getFecha()<<setw(15)<<listaFacturas[i].getMonto()<<endl;
-                                }                                           
+                                }
                                 archivo.close();*/
                                 system("pause");
                             break;
@@ -446,4 +479,10 @@ void titulo(){
 	cout<<left<<setw(56)<<"| Version del sistema: "<<right<<"|"<<endl;    //falta cambiar la version
 	cout<<left<<setw(56)<<"| Empresa creadora: RMO Software"<<right<<"|"<<endl;
 	cout<<"========================================================="<<endl;
+}
+
+int cadenaNum(string cadena){
+    string subcadena=cadena.substr(5,8);
+    int numero=stoi(subcadena);
+    return numero;
 }

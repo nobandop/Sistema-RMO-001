@@ -21,7 +21,8 @@ class Cliente{
         void leerCliente();
         void modificarCliente(int);
         void mostrarCliente();
-        string getNomCliente();
+        string getCodigo();
+        string getNombre();
 };
 
 #endif // CLIENTE_H

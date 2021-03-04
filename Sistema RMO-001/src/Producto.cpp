@@ -29,7 +29,7 @@ void Producto::mostrarProducto(){
     cout<<setw(15)<<cantidadProducto<<"| ";
     cout<<setw(20)<<categoriaProducto<<"| ";
     cout<<setw(15)<<precioProducto<<"| ";
-    cout<<setw(20)<<proveedor->getNomProveedor()<<"|";
+    cout<<setw(20)<<proveedor->getNombre()<<"|";
     cout<<endl;
 }
 
