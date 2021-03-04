@@ -23,7 +23,5 @@ bool Controlador::verificarAcceso(string nom,string contra){
 }
 
 void Controlador::actualizarNombre(string nom){nombre = nom;}
-
 void Controlador::actualizarNomUsuario(string nomu){nomusuario = nomu;}
-
 void Controlador::actualizarContrasenia(string contra){contrasenia = contra;}

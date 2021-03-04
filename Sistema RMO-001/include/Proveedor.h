@@ -8,9 +8,9 @@ class Proveedor{
     private:
         string codigoProveedor;
         string nombreProveedor;
-        char rucProveedor[20];
-        char telefonoProveedor[12];
-        char direccionProveedor[40];
+        string rucProveedor;
+        string telefonoProveedor;
+        string direccionProveedor;
     public:
         Proveedor();
         void leerProveedor();

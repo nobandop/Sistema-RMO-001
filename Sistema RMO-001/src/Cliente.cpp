@@ -6,20 +6,20 @@
 using namespace std;
 
 Cliente::Cliente(){
-    codigoCliente="-";
-    nombreCliente="-";
-    dniCliente="00000000";
-    telefonoCliente="000000000";
+    codigoCliente = "-";
+    nombreCliente = "-";
+    dniCliente = "00000000";
+    telefonoCliente = "000000000";
     nFacturas = 0;
 }
 
 void Cliente::asignarFactura(Factura* fact){
     facturas[nFacturas] = fact;
-    nFacturas = nFacturas +1;
+    nFacturas = nFacturas + 1;
 }
 
 void Cliente::leerCliente(){
-	cout<<"Codigo (Ejm.: cli-001): "; cin>>codigoCliente;
+	cout<<"Codigo (Ejm.: CLI-001): "; cin>>codigoCliente;
 	cout<<"Nombre completo: "; cin>>nombreCliente;
 	cout<<"DNI: "; cin>>dniCliente;
 	cout<<"Telefono: "; cin>>telefonoCliente;

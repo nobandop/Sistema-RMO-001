@@ -1,6 +1,9 @@
 #include "Factura.h"
+#include <iostream>
 #include <iomanip>
 #include "string.h"
+
+using namespace std;
 
 Factura::Factura(){
     codigoFactura = "-";
@@ -23,11 +26,17 @@ void Factura::desarrolloFactura(Producto* p,int c){
 }
 
 void Factura::asignarCliente(Cliente* c){cliente = c;}
-
-void Factura::mostrarFactura(){cout<<"| "<<left<<setw(15)<<codigoFactura<<"| "<<setw(40)<<cliente->getNombre()<<"| "<<setw(15)<<fechaFactura<<"| "<<setw(13)<<totalPagar<<"|"<<endl;}
+string Factura::mostraCliente(){cliente->getNombre();}
+void Factura::mostrarFactura(){
+	cout<<"| "<<left;
+	cout<<setw(15)<<codigoFactura<<"| ";
+	cout<<setw(40)<<cliente->getNombre()<<"| ";
+	cout<<setw(15)<<fechaFactura<<"| ";
+	cout<<setw(13)<<totalPagar<<"|";
+	cout<<endl;}
 
 void Factura::productosComprados(){
-    cout<<"Productos comprados: "<<endl;
+    cout<<"\nProductos comprados: "<<endl;
 	cout<<left;
 	cout<<setw(15)<<"| Codigo";
 	cout<<setw(26)<<"| Nombre de Prod.";

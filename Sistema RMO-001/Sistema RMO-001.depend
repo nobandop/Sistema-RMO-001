@@ -74,7 +74,7 @@
 	<fstream>
 	<iomanip>
 
-1614836702 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\main.cpp
+1614859733 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\main.cpp
 	<iostream>
 	<string.h>
 	<iomanip>
@@ -85,18 +85,17 @@
 	"Producto.h"
 	"Proveedor.h"
 
-1614830843 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\cliente.cpp
+1614859067 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\cliente.cpp
 	"Cliente.h"
 	<iostream>
 	<iomanip>
 	<string.h>
 
-1614830666 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\cliente.h
+1614858972 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\cliente.h
 	<iostream>
-	<string.h>
 	"Factura.h"
 
-1614838577 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\factura.h
+1614859800 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\factura.h
 	<iostream>
 	"Cliente.h"
 	"Producto.h"
@@ -105,18 +104,17 @@
 	<iostream>
 	"Proveedor.h"
 
-1614828795 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\proveedor.h
+1614858735 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\proveedor.h
 	<iostream>
 
-1614836121 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\controlador.cpp
+1614859128 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\controlador.cpp
 	"Controlador.h"
 	<iostream>
 	<string.h>
 	<fstream>
 
-1614836107 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\controlador.h
+1614859103 c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\include\controlador.h
 	<iostream>
-	<string.h>
 	"Producto.h"
 	"Proveedor.h"
 	"Cliente.h"
@@ -127,19 +125,20 @@
 	<string.h>
 	"Factura.h"
 
-1614829314 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\factura.cpp
+1614859788 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\factura.cpp
 	"Factura.h"
+	<iostream>
 	<iomanip>
 	"string.h"
 
-1614837632 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\producto.cpp
+1614859417 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\producto.cpp
 	"Producto.h"
 	<iostream>
 	<string.h>
 	<iomanip>
 	<fstream>
 
-1614828795 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\proveedor.cpp
+1614860110 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\proveedor.cpp
 	"Proveedor.h"
 	<iostream>
 	<string.h>

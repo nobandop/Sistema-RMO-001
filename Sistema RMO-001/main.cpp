@@ -451,13 +451,13 @@ int main(){
                                 for(int i = 0; i <= 85; i++){cout<<"=";} cout<<endl;
                                 for(int i = 0; i < nFacturas; i++){listaFacturas[i].mostrarFactura();}
 
-                                /*archivo.open("reporte.txt");
+                                archivo.open("reporte.txt");
                                 archivo<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
                                 for(int i = 0; i <= 85; i++){archivo<<"=";} archivo<<endl;
                                 for(int i = 0; i < nFacturas; i++){
-                                    archivo<<left<<setw(17)<<listaFacturas[i].getCodigo()<<setw(42)<<listaFacturas[i].getNombreCli()<<setw(17)<<listaFacturas[i].getFecha()<<setw(15)<<listaFacturas[i].getMonto()<<endl;
+                                    archivo<<left<<setw(17)<<listaFacturas[i].getCodigo()<<setw(42)<<listaFacturas[i].mostraCliente()<<setw(17)<<listaFacturas[i].getFecha()<<setw(15)<<listaFacturas[i].getMonto()<<endl;
                                 }
-                                archivo.close();*/
+                                archivo.close();
                                 system("pause");
                             break;
                             case 6: break;
@@ -520,7 +520,7 @@ void titulo(){
 	cout<<"========================================================="<<endl;
 	cout<<left<<setw(50)<<"|\tSistema de Gestion de productos RMO-001"<<"|"<<endl;
 	cout<<left<<setw(56)<<"| Nombre del Supermercado: Tienda Los Angeles"<<right<<"|"<<endl;
-	cout<<left<<setw(56)<<"| Version del sistema: "<<right<<"|"<<endl;    //falta cambiar la version
+	cout<<left<<setw(56)<<"| Version del sistema: v1.00"<<right<<"|"<<endl;    //falta cambiar la version
 	cout<<left<<setw(56)<<"| Empresa creadora: RMO Software"<<right<<"|"<<endl;
 	cout<<"========================================================="<<endl;
 }

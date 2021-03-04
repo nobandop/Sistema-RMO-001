@@ -46,21 +46,12 @@ void Producto::modificarProducto(int n){
 }
 
 void Producto::asignarProveedor(Proveedor *p1){proveedor = p1;}
-
 void Producto::actualizarCantProductos(int c){cantidadProducto = cantidadProducto - c;}
-
 void Producto::agregarCantSolicitada(int c){cantidadSolicitada = c;}
-
 void Producto::agregarSubTotal(int c){subtotal = precioProducto * c;}
-
 string Producto::getCodigo(){return codigoProducto;}
-
 string Producto::getNombre(){return nombreProducto;}
-
 int Producto::getCantProducto(){return cantidadProducto;}
-
 int Producto::getCantsolicitada(){return cantidadSolicitada;}
-
 float Producto::getPrecio(){return precioProducto;}
-
 float Producto::getSubTotal(){return subtotal;}

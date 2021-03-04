@@ -2,7 +2,6 @@
 #define CLIENTE_H
 
 #include <iostream>
-#include <string.h>
 #include "Factura.h"
 using namespace std;
 
