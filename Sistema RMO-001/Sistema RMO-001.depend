@@ -73,7 +73,7 @@
 	<fstream>
 	<iomanip>
 
-1614865621 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\main.cpp
+1614868271 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\main.cpp
 	<iostream>
 	<string.h>
 	<iomanip>
@@ -84,7 +84,7 @@
 	"Producto.h"
 	"Proveedor.h"
 
-1614859067 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\cliente.cpp
+1614868978 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\cliente.cpp
 	"Cliente.h"
 	<iostream>
 	<iomanip>
@@ -130,14 +130,14 @@
 	<iomanip>
 	"string.h"
 
-1614859417 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\producto.cpp
+1614868978 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\producto.cpp
 	"Producto.h"
 	<iostream>
 	<string.h>
 	<iomanip>
 	<fstream>
 
-1614860110 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\proveedor.cpp
+1614868978 source:c:\users\naydu\onedrive\documentos\github\sistema-rmo-001\sistema rmo-001\src\proveedor.cpp
 	"Proveedor.h"
 	<iostream>
 	<string.h>

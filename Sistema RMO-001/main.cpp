@@ -160,8 +160,8 @@ int main(){
                                     cout<<"==================================="<<endl;
                                     cout<<"|Opcion: Ver Lista de  Proveedores|"<<endl;
                                     cout<<"==================================="<<endl<<"\n";
-                                    cout<<left<<setw(17)<<"| Codigo (1)"<<setw(42)<<"| Nombre (2) "<<setw(17)<<"| RUC (3) "<<setw(17)<<"| Telefono (4) "<<setw(42)<<"| Direccion (5) "<<"|"<<endl;
-                                    for(int i = 0; i <= 135; i++){cout<<"=";} cout<<endl;
+                                    cout<<left<<setw(17)<<"| Codigo (1)"<<setw(22)<<"| Nombre (2) "<<setw(17)<<"| RUC (3) "<<setw(17)<<"| Telefono (4) "<<setw(42)<<"| Direccion (5) "<<"|"<<endl;
+                                    for(int i = 0; i <= 115; i++){cout<<"=";} cout<<endl;
                                     for(int i = 0; i < nProveedores; i++){listaProveedores[i].mostrarProveedor();}
                                     cout<<endl<<"Desea modificar algun producto? [S/N]: "; cin>>h;
                                     if(h=='S'||h=='s'){
@@ -442,7 +442,7 @@ int main(){
                                     archivo<<left<<setw(17)<<"| Codigo "<<setw(42)<<"| Nombre del cliente "<<setw(17)<<"| Fecha "<<setw(15)<<"| Monto "<<"|"<<endl;
                                     for(int i = 0; i <= 91; i++){archivo<<"=";} archivo<<endl;
                                     for(int i = 0; i < nFacturas; i++){
-                                        archivo<<left<<setw(17)<<listaFacturas[i].getCodigo()<<setw(42)<<listaFacturas[i].mostraCliente()<<setw(17)<<listaFacturas[i].getFecha()<<setw(15)<<listaFacturas[i].getMonto()<<endl;
+                                        archivo<<left<<setw(17)<<" | "<<listaFacturas[i].getCodigo()<<" | "<<setw(42)<<listaFacturas[i].mostraCliente()<<" | "<<setw(17)<<listaFacturas[i].getFecha()<<" | "<<setw(15)<<listaFacturas[i].getMonto()<<" | "<<endl;
                                     }
                                 }else{
                                     cout<<"No se pudo abrir el archivo."<<endl;

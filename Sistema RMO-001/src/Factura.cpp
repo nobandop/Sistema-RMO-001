@@ -26,7 +26,7 @@ void Factura::desarrolloFactura(Producto* p,int c){
 }
 
 void Factura::asignarCliente(Cliente* c){cliente = c;}
-string Factura::mostraCliente(){cliente->getNombre();}
+string Factura::mostraCliente(){return cliente->getNombre();}
 void Factura::mostrarFactura(){
 	cout<<"| "<<left;
 	cout<<setw(15)<<codigoFactura<<"| ";
